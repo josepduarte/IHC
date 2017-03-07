@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace Exemplo1_IHC
 {
@@ -81,7 +82,13 @@ namespace Exemplo1_IHC
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-           // MessageBox.Show("Olá Mundo");
+            // MessageBox.Show("Olá Mundo");
+            SolidColorBrush init_color = new SolidColorBrush(Colors.Pink);
+            this.Background = init_color;
+            ColorAnimation colorAnim = new ColorAnimation();
+            colorAnim.Duration = new Duration(TimeSpan.FromMilliseconds(10000));
+            colorAnim.To = Colors.LightBlue;
+            init_color.BeginAnimation(SolidColorBrush.ColorProperty, colorAnim);            //this.Background = init_color;
         }
 
         private void button_MouseMove(object sender, MouseEventArgs e)
