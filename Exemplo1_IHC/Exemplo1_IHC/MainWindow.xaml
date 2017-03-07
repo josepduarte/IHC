@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Exemplo1_IHC"
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="525" Margin="0" MouseLeftButtonDown="Window_MouseLeftButtonDown" Activated="Window_Activated" MouseMove="Window_MouseMove" SizeChanged="Window_SizeChanged" MouseDoubleClick="Window_MouseDoubleClick" MouseDown="Window_MouseDown" Closed="Window_Closed" Loaded="Window_Loaded" DragEnter="Window_DragEnter" Drop="Window_Drop" AllowDrop="True">
-    <Grid Margin="-165,0,0,0">
+    <Grid Margin="-165,0,-171,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="189*"/>
             <ColumnDefinition Width="88*"/>
@@ -15,6 +15,17 @@
             <ColumnDefinition Width="88*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="button" Content="Button1" Grid.Column="2" HorizontalAlignment="Left" Margin="128.267,49,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" MouseMove="button_MouseMove"/>
-
+        <Button Content="XAML button" Margin="168,205,358,10" Name="button2" FontSize="25" Grid.ColumnSpan="3"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Margin="81,80,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.461,0.6" Width="143" Grid.Column="2" Maximum="100">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.154"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <TextBox x:Name="textBox" Text="{Binding Value, StringFormat={}{0:0.00}, ElementName= slider}" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="114,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
