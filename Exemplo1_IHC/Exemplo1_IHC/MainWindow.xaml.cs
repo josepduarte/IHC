@@ -37,7 +37,7 @@ namespace Exemplo1_IHC
 
         private void Window_MouseMove(object sender, MouseEventArgs e)
         {
-            Console.WriteLine("I'm a rat and I'm moving like there is no tomorrow. ");
+          // Console.WriteLine("I'm a rat and I'm moving like there is no tomorrow. ");
         }
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -48,6 +48,10 @@ namespace Exemplo1_IHC
         private void Window_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Console.WriteLine("You dont need to click twice!! I understood the first time! ");
+            Point p = e.GetPosition(this);
+            double xPos = p.X;
+            double yPos = p.Y;
+            Console.WriteLine("The X Position is " + xPos + " The Y Position is " + yPos);
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -77,7 +81,14 @@ namespace Exemplo1_IHC
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Olá Mundo by button");
+           // MessageBox.Show("Olá Mundo");
+        }
+
+        private void button_MouseMove(object sender, MouseEventArgs e)
+        {
+          //  Console.WriteLine("Moving on button. ");
+            if (e.RightButton == MouseButtonState.Pressed)
+                Console.WriteLine("Botão Direito");
         }
     }
 }
