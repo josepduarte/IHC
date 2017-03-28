@@ -30,7 +30,7 @@
                 Cursos
             </Label>
         </Border>
-        <ListBox Name="CursosListBox" Grid.Column="1" Grid.Row="2">
+        <ListBox Name="CursosListBox" Grid.Column="1" Grid.Row="2" MouseDoubleClick="CursosListBox_MouseDoubleClick">
             <ListBoxItem>
                 Engenharia de Computadores e Telemática
             </ListBoxItem>
