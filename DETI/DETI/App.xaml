@@ -9,15 +9,30 @@
             <Setter Property="Foreground" Value="White" />
             <Setter Property="VerticalAlignment" Value="Center" />
             <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="FontFamily" Value="Courier New" />
+            <Setter Property="FontSize" Value="14" />
         </Style>
         <Style x:Key="borderStyle" TargetType="{x:Type Border}">
             <Setter Property="Padding" Value="5" />
-            <Setter Property="Background" Value="#4E87D4" />
+            <Setter Property="Background" Value="#9a3324" />
         </Style>
         <Style x:Key="boldLabelStyle" TargetType="{x:Type Label}" BasedOn="{StaticResource labelStyle}">
             <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="Background" Value="#9a3324" />
         </Style>
 
+        <Style x:Key="headerTextStyle">
+            <Setter Property="Label.VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Label.FontFamily" Value="Trebuchet MS"></Setter>
+            <Setter Property="Label.FontWeight" Value="Bold"></Setter>
+            <Setter Property="Label.FontSize" Value="18"></Setter>
+            <Setter Property="Label.Foreground" Value="#0066cc"></Setter>
+        </Style>
+        <!-- Button style -->
+        <Style x:Key="buttonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="125" />
+            <Setter Property="Height" Value="25" />
+            <Setter Property="Margin" Value="0,10,0,0" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+        </Style>
     </Application.Resources>
 </Application>

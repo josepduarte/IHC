@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:DETI"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="DETI_Cursos">
+      Title="DETI_Cursos" >
 
     <Grid Margin="10,0,10,10">
         <Grid.Background>
@@ -22,7 +22,9 @@
             <RowDefinition />
             <RowDefinition Height="Auto"/>
             <RowDefinition />
-        </Grid.RowDefinitions>        <Label Grid.Column="1" Grid.Row="1">
+        </Grid.RowDefinitions>        <Label Grid.Column="1" Style="{StaticResource headerTextStyle}">
+            Disciplinas do Curso
+        </Label>        <Label Grid.Column="1" Grid.Row="1">
             Nome:
         </Label>
         <Label Name="CourseNameLabel" Grid.Column="2" Grid.Row="1">
