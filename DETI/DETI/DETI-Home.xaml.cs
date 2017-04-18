@@ -28,16 +28,18 @@ namespace DETI
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             DETI_Cursos cursosPage = new DETI_Cursos();
-        
+            /*
             try {
+            */
                 String nome = ((ListBoxItem)CursosListBox.SelectedValue).Content.ToString();
                 cursosPage.CourseNameLabel.Content = nome;
                 this.NavigationService.Navigate(cursosPage);
+            /*
             } catch (NullReferenceException e) // try to implement try catch
             {
                 MessageBox.Show("Selecione um curso", "Erro", MessageBoxButton.OK);
             }
-
+            */
 
 
 

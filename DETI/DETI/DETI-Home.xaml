@@ -11,7 +11,8 @@
     <Grid Margin="10,0,10,10">
         <Grid.Background>
             <ImageBrush ImageSource="images/Logo_UA.jpg"/>
-        </Grid.Background>
+        </Grid.Background>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition />
@@ -24,9 +25,10 @@
         </Grid.RowDefinitions>
         <Label Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Bold" FontSize="18" Foreground="#0066cc">
             Cursos do DETI
-        </Label>
-        <Border Grid.Column="1" Grid.Row="1"  Padding="5" Background="#4E87D4">
-            <Label> 
+        </Label>
+
+        <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource borderStyle}">
+            <Label Style="{StaticResource boldLabelStyle}"> 
                 Cursos
             </Label>
         </Border>
@@ -44,5 +46,6 @@
         <Button Grid.Column="2" Grid.Row="3" Width="50" Margin="5,5,5,5" HorizontalAlignment="Right" Click="Button_Click">
             _Ver
         </Button>
-    </Grid>
+    </Grid>
+
 </Page>
