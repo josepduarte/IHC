@@ -37,6 +37,7 @@
             </Label>
         </Border>
         <ListBox Name="CursosListBox" Grid.Column="1" Grid.Row="2" MouseDoubleClick="CursosListBox_MouseDoubleClick" ItemsSource="{Binding Source={StaticResource DETICursos}}">
+            <!-- falta o stack panel para mostrar o código do curso também no 3.5 -->
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Label Content="{Binding Path=Nome}"></Label>
