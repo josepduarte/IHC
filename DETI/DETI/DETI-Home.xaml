@@ -9,6 +9,10 @@
       Title="DETI_Home">
 
     <Grid Margin="10,0,10,10">
+        <Grid.Resources>
+            <local:ListaCursos x:Key="DETICursos"/>
+        </Grid.Resources>
+        
         <Grid.Background>
             <ImageBrush ImageSource="images/Logo_UA.jpg"/>
         </Grid.Background>
@@ -32,16 +36,12 @@
                 Cursos
             </Label>
         </Border>
-        <ListBox Name="CursosListBox" Grid.Column="1" Grid.Row="2" MouseDoubleClick="CursosListBox_MouseDoubleClick">
-            <ListBoxItem>
-                Engenharia de Computadores e Telemática
-            </ListBoxItem>
-            <ListBoxItem>
-                Engenharia Eletrónica e Telecomunicações
-            </ListBoxItem>
-            <ListBoxItem>
-                Engenharia Informática
-            </ListBoxItem>
+        <ListBox Name="CursosListBox" Grid.Column="1" Grid.Row="2" MouseDoubleClick="CursosListBox_MouseDoubleClick" ItemsSource="{Binding Source={StaticResource DETICursos}}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding Path=Nome}"></Label>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
         <Button Grid.Column="2" Grid.Row="3" Style="{StaticResource buttonStyle}" Click="Button_Click">
             _Ver

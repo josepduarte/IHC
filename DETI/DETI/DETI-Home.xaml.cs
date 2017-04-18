@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,4 +58,29 @@ namespace DETI
             this.NavigationService.Navigate(cursosPage);
         }
     }
+    public class Curso
+    {
+        private string _nome;
+        private int _CodCurso;
+        public int CodCurso
+        {
+            get { return _CodCurso; }
+            set { _CodCurso = value; }
+        }
+        public string Nome
+        {
+            get { return _nome; }
+            set { _nome = value; }
+        }
+    }
+    public class ListaCursos : ObservableCollection<Curso>
+    {
+        public ListaCursos()
+        {
+            Add(new Curso { Nome = "Computadores e Telemática", CodCurso = 8240 });
+            Add(new Curso { Nome = "Electrónica e Telecomunicações", CodCurso = 8204 });
+            Add(new Curso { Nome = "Engenharia Informática", CodCurso = 8295, });
+        }
+    }
+
 }
