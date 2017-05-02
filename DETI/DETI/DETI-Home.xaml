@@ -10,9 +10,40 @@
 
     <Grid Margin="10,0,10,10">
         <Grid.Resources>
-            <local:ListaCursos x:Key="DETICursos"/>
+            <!--Dados cursos 1º ano 1º semestre-->
+            <XmlDataProvider x:Key="FonteDadosDeti" XPath="Cursos">
+                <x:XData>
+                    <Cursos xmlns="">
+                        <Curso Nome="Computadores e Telemática" Codigo="8240">
+                            <UC Disciplina="Álgebra Linear e Geometria Analítica" ECTS="6" />
+                            <UC Disciplina="Cálculo I" ECTS="6" />
+                            <UC Disciplina="Programação I" ECTS="8" />
+                            <UC Disciplina="Introdução aos Sistemas Digitais" ECTS="6" />
+                        </Curso>
+                        <Curso Nome="Electrónica e Telecomunicações" Codigo ="8204">
+                            <UC Disciplina="Álgebra Linear e Geometria Analítica" ECTS="6" />
+                            <UC Disciplina="Cálculo I" ECTS="6" />
+                            <UC Disciplina="Programação I" ECTS="8" />
+                            <UC Disciplina="Introdução aos Sistemas Digitais" ECTS="6" />
+                        </Curso>
+                        <Curso Nome="Engenharia Informática" Codigo="8295">
+                            <UC Disciplina="Álgebra Linear e Geometria Analítica" ECTS="6" />
+                            <UC Disciplina="Cálculo I" ECTS="6" />
+                            <UC Disciplina="Elementos de Física" ECTS="8" />
+                            <UC Disciplina="Introdução às Tecnologias Web" ECTS="6" />
+                            <UC Disciplina="Fundamentos de programação" ECTS="6" />
+                        </Curso>
+                    </Cursos>
+                </x:XData>
+            </XmlDataProvider>
+            <DataTemplate x:Key="nameItemTemplate">
+                <StackPanel Margin="8" Orientation="Horizontal">
+                    <Label Content="{Binding XPath=@Nome}"/>
+                    <Label Content="{Binding XPath=@Codigo}"/>
+                </StackPanel>
+            </DataTemplate>
         </Grid.Resources>
-        
+
         <Grid.Background>
             <ImageBrush ImageSource="images/Logo_UA.jpg"/>
         </Grid.Background>
@@ -36,16 +67,10 @@
                 Cursos
             </Label>
         </Border>
-        <ListBox Name="CursosListBox" Grid.Column="1" Grid.Row="2" MouseDoubleClick="CursosListBox_MouseDoubleClick" ItemsSource="{Binding Source={StaticResource DETICursos}}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Margin="8" Orientation="Horizontal">
-                        <Label Content="{Binding Path=Nome}"></Label>
-                        <Label Content="{Binding Path=CodCurso}"></Label>
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        
+        <ListBox Name="CursosListBox" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Source={StaticResource FonteDadosDeti}, 
+                XPath=Curso}" ItemTemplate="{StaticResource nameItemTemplate}">
+        </ListBox>
         <Button Grid.Column="2" Grid.Row="3" Style="{StaticResource buttonStyle}" Click="Button_Click">
             _Ver
         </Button>
