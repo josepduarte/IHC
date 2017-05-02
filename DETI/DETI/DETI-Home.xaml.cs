@@ -28,19 +28,8 @@ namespace DETI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-
-            if (CursosListBox.SelectedValue != null)
-            {
-                DETI_Cursos cursosPage = new DETI_Cursos();
-                this.NavigationService.Navigate(cursosPage);
-                cursosPage.CourseNameLabel.Content = ((Curso)CursosListBox.SelectedValue).Nome;
-            }
-            else
-                MessageBox.Show("Selecione um curso", "Erro", MessageBoxButton.OK);
-
-
-
+            DETI_Cursos PaginaCursos = new DETI_Cursos(this.CursosListBox.SelectedItem);
+            this.NavigationService.Navigate(PaginaCursos);
 
         }
 
@@ -81,5 +70,5 @@ namespace DETI
             Add(new Curso { Nome = "Engenharia Informática", CodCurso = 8295, });
         }
     }
-
+    
 }

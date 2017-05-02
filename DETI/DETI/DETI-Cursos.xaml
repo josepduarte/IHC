@@ -24,12 +24,11 @@
             <RowDefinition />
         </Grid.RowDefinitions>        <Label Grid.Column="1" Style="{StaticResource headerTextStyle}">
             Disciplinas do Curso
-        </Label>        <Label Grid.Column="1" Grid.Row="1">
+        </Label>        <Label Grid.Column="1" Grid.Row="1" >
             Nome:
         </Label>
-        <Label Name="CourseNameLabel" Grid.Column="2" Grid.Row="1">
-            
-        </Label>
+        <Label Name="CourseNameLabel" Grid.Column="2" Grid.Row="1"  Style="{StaticResource labelStyle}" Content="{Binding XPath=@Nome}"/>
+
         <DataGrid Grid.Column="1" Grid.Row="2" ColumnHeaderStyle="{StaticResource columnHeaderStyle}" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Disciplina"/>

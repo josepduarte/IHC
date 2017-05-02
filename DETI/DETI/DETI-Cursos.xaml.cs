@@ -22,7 +22,14 @@ namespace DETI
     {
         public DETI_Cursos()
         {
+            
             InitializeComponent();
+
         }
+        public DETI_Cursos(object data) : this()
+        {
+            this.DataContext = data;
+        }
+
     }
 }
