@@ -1,0 +1,80 @@
+﻿<Window x:Class="Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="{x:Static SystemParameters.PrimaryScreenHeight}" 
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        >
+
+    <Border Padding="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- First Colummn -->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Style="{DynamicResource MaterialDesignRaisedLightButton}" Grid.Column="0" Height="Auto" Margin="10 10 10 10" Content="Propriedades"/>
+                    <Button Style="{DynamicResource MaterialDesignRaisedLightButton}" Grid.Column="1" Height="Auto" Margin="10 10 10 10" Content="Negócios"/>
+
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Style="{DynamicResource MaterialDesignRaisedLightButton}" Grid.Column="0" Height="Auto" Margin="10 10 10 10" Content="Encomendas"/>
+                    <Button Style="{DynamicResource MaterialDesignRaisedLightButton}" Grid.Column="1" Height="Auto" Margin="10 10 10 10" Content="Material"/>
+
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Style="{DynamicResource MaterialDesignRaisedLightButton}" Grid.Column="0" Height="Auto" Margin="10 10 10 10" Content="Histórico"/>
+                    <Button Style="{DynamicResource MaterialDesignRaisedLightButton}" Grid.Column="1" Height="Auto" Margin="10 10 10 10" Content="Administração"/>
+
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Style="{DynamicResource MaterialDesignRaisedLightButton}" Grid.Column="0" Height="Auto" Margin="10 10 10 10" Content="x"/>
+                    <Button Style="{DynamicResource MaterialDesignRaisedLightButton}" Grid.Column="1" Height="Auto" Margin="10 10 10 10" Content="Sair"/>
+                </Grid>
+            </Grid>
+            <!-- Second Colummn -->
+            
+
+
+        </Grid>
+    </Border>
+    
+</Window>
