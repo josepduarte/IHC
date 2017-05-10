@@ -1,0 +1,94 @@
+﻿<Page x:Class="Project.Homepage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project"
+      mc:Ignorable="d" 
+      Title="Homepage">
+
+
+    <Border Padding="10">
+        <Grid Background="#FF2E7D32">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- First Colummn -->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Style="{DynamicResource MaterialDesignRaisedButton}" FontSize="20px" Grid.Column="0" Height="Auto" Margin="10 10 10 10" Content="Propriedades" Click="Button_Click" />
+                    <Button Style="{DynamicResource MaterialDesignRaisedButton}" FontSize="20px" Grid.Column="1" Height="Auto" Margin="10 10 10 10" Content="Negócios" Click="Button_Click_1"/>
+
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Style="{DynamicResource MaterialDesignRaisedButton}" FontSize="20px" Grid.Column="0" Height="Auto" Margin="10 10 10 10" Content="Encomendas" Click="Button_Click_2"/>
+                    <Button Style="{DynamicResource MaterialDesignRaisedButton}" FontSize="20px" Grid.Column="1" Height="Auto" Margin="10 10 10 10" Content="Material" Click="Button_Click_3"/>
+
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Style="{DynamicResource MaterialDesignRaisedButton}" FontSize="20px" Grid.Column="0" Height="Auto" Margin="10 10 10 10" Content="Histórico" Click="Button_Click_4"/>
+                    <Button Style="{DynamicResource MaterialDesignRaisedButton}" FontSize="20px" Grid.Column="1" Height="Auto" Margin="10 10 10 10" Content="Administração"/>
+
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Style="{DynamicResource MaterialDesignRaisedButton}" FontSize="20px" Grid.Column="0" Height="Auto" Margin="10 10 10 10" Content="x"/>
+                    <Button Style="{DynamicResource MaterialDesignRaisedButton}" FontSize="20px" Grid.Column="1" Height="Auto" Margin="10 10 10 10" Content="Sair"/>
+                </Grid>
+            </Grid>
+            <!-- Second Colummn -->
+            <StackPanel Grid.Column="1" Margin="100 150"  >
+                <Image Height="175" Source="pack://application:,,,/images/weather.png"/>
+                <ListBox Foreground="White" FontSize="20px">
+                    <StackPanel Margin="15" Orientation="Horizontal">
+                        <Label Foreground="White" Content="Data" ></Label>
+                        <Label Foreground="White" Content="Temp" Margin="100 0 0 0"></Label>
+                    </StackPanel>
+                    <StackPanel Margin="15" Orientation="Horizontal">
+                        <Label Foreground="White" Content="Data"></Label>
+                        <Label Foreground="White" Content="Temp" Margin="100 0 0 0"></Label>
+                    </StackPanel>
+                    <StackPanel Margin="15" Orientation="Horizontal">
+                        <Label Foreground="White" Content="Data"></Label>
+                        <Label Foreground="White" Content="Temp" Margin="100 0 0 0"></Label>
+                    </StackPanel>
+                    <StackPanel Margin="15" Orientation="Horizontal">
+                        <Label Foreground="White" Content="Data"></Label>
+                        <Label Foreground="White" Content="Temp" Margin="100 0 0 0"></Label>
+                    </StackPanel>
+                </ListBox>
+            </StackPanel>
+
+
+
+        </Grid>
+    </Border>
+
+</Page>

@@ -16,15 +16,13 @@ using System.Windows.Shapes;
 namespace Project
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Encomendas.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Encomendas : Page
     {
-        public MainWindow()
+        public Encomendas()
         {
             InitializeComponent();
         }
-
-
     }
 }
