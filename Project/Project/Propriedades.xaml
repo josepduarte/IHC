@@ -6,43 +6,91 @@
       xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
       xmlns:local="clr-namespace:Project"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="768" d:DesignWidth="1366"
       Title="Propriedades">
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="2*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="3*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+    <Border Padding="5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="13*"/>
+            </Grid.RowDefinitions>
+            <Grid Background="#1B5E20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label VerticalAlignment="Center" Grid.Column="0" Foreground="White" FontSize="16px" Margin="10" FontWeight="DemiBold">
+                    Gestão de Atividade Madeireira
+                </Label>
+                <Button  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Margin="10" Click="Button_Click">
+                    Voltar à Página Inicial
+                </Button>
+            </Grid>
 
-        <m:Map Grid.Column="1" Grid.RowSpan="3" Name="myMap" Center="40.6393791,-8.6621375" ZoomLevel="10"
+            <Grid Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <!-- Bing Maps -->
+                <m:Map Grid.RowSpan="2" Grid.Column="1" Name="myMap" Center="40.6393791,-8.6621375" ZoomLevel="10" Mode="Road" 
+                       CredentialsProvider="NXJmFr6B4HAelhqfhkAr~m1Sa31jOEEN2wZI-M3zyGw~AuObpNF48mjUjsmQm2-tYl4OoBX6j694lkvva6iuW29Ml6bjAZsErE6NZZd13vPN" >
+                </m:Map>
+                <Border Grid.Column="0" BorderBrush="Gray" BorderThickness="1">
+                    <ScrollViewer>
+
+                    </ScrollViewer>
+                </Border>
+                <!-- Botão "Adicionar Propriedade" -->
+                <Button Grid.Row="1" Grid.Column="0" FontSize="25" Margin="0,10,5.2,10" Click="Button_Click_1" Height="Auto" >
+                    <TextBlock Text="Adicionar Propriedade" VerticalAlignment="Center" />
+                </Button>
+            </Grid>
+
+        </Grid>
+    </Border>
+</Page>
+
+
+
+
+
+
+<!--<Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="13*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>-->
+
+<!--<m:Map Grid.Row="1" Grid.Column="1" Name="myMap" Center="40.6393791,-8.6621375" ZoomLevel="10"
                CredentialsProvider="NXJmFr6B4HAelhqfhkAr~m1Sa31jOEEN2wZI-M3zyGw~AuObpNF48mjUjsmQm2-tYl4OoBX6j694lkvva6iuW29Ml6bjAZsErE6NZZd13vPN" Mode="Road">
-        </m:Map>
+        </m:Map>-->
 
-        <!-- Botão "Voltar à Página Inicial" -->
-        <Button Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Click="Button_Click" >
-            <StackPanel Orientation="Horizontal" >
-                <!--<Image Source="images/home.png" />-->
-                <TextBlock Text="Voltar à Página Inicial" VerticalAlignment="Center" />
+<!-- Botão "Voltar à Página Inicial" -->
+<!--<Button Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Click="Button_Click" >
+            <StackPanel Orientation="Horizontal" >-->
+<!--<Image Source="images/home.png" />-->
+<!--<TextBlock Text="Voltar à Página Inicial" VerticalAlignment="Center" />
             </StackPanel>
-        </Button>
+        </Button>-->
 
-        <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="0.5">
+<!--<Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="0.5">
             <ScrollViewer>
                 
             </ScrollViewer>
-        </Border>
+        </Border>-->
 
-        <!-- Botão "Adicionar Propriedade" -->
-        <Button Grid.Row="2" Grid.Column="0" VerticalAlignment="Top" Background="Blue" Click="Button_Click_1" >
+<!-- Botão "Adicionar Propriedade" -->
+<!--<Button Grid.Row="2" Grid.Column="0" VerticalAlignment="Top" Background="Blue" Click="Button_Click_1" >
             <TextBlock Text="Adicionar Propriedade" VerticalAlignment="Center" />
-        </Button>
+        </Button>-->
 
 
-    </Grid>
-</Page>
+<!--</Grid>
+    </Border>
+</Page>-->
