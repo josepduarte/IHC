@@ -37,8 +37,8 @@ namespace Project
         {
             //NavigationService ns = NavigationService.GetNavigationService(this);
             //ns.Navigate(new Uri("AdicionarPropriedade.xaml", UriKind.Relative));
-            Project.AdicionarProp popup = new Project.AdicionarProp();
-            popup.Show();
+// Project.AdicionarProp popup = new Project.AdicionarProp();
+            //.Show();
         }
     }
 }

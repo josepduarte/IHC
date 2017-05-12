@@ -24,7 +24,6 @@ C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\bin\Debug\SharpVectors.Mod
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\bin\Debug\SharpVectors.Rendering.Gdi.dll
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\bin\Debug\SharpVectors.Rendering.Wpf.dll
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\bin\Debug\SharpVectors.Runtime.dll
-C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Homepage.g.cs
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Homepage.baml
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Encomendas.g.cs
@@ -37,3 +36,6 @@ C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Historico.baml
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Material.baml
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Negocios.baml
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Propriedades.baml
+C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
+C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Add_Negocio.g.cs
+C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Add_Negocio.baml

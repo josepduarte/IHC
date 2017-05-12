@@ -95,6 +95,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Add_Negocio.xaml.cs">
+      <DependentUpon>Add_Negocio.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Encomendas.xaml.cs">
       <DependentUpon>Encomendas.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
     <Compile Include="Propriedades.xaml.cs">
       <DependentUpon>Propriedades.xaml</DependentUpon>
     </Compile>
+    <Page Include="Add_Negocio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Encomendas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
