@@ -35,10 +35,9 @@ namespace Project
         /* Botão "Adicionar Propriedade" */
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            //NavigationService ns = NavigationService.GetNavigationService(this);
-            //ns.Navigate(new Uri("Add_Propriedade.xaml", UriKind.Relative));
-            Project.Add_Propriedade popup = new Project.Add_Propriedade();
-            popup.Show();
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("Add_Propriedade.xaml", UriKind.Relative));
+            
         }
     }
 }
