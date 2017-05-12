@@ -40,3 +40,6 @@ C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Add_Negocio.g.cs
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Add_Negocio.baml
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Add_Propriedade.g.cs
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Add_Propriedade.baml
+C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
