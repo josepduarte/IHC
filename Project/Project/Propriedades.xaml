@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
 
         <m:Map Grid.Column="1" Grid.RowSpan="3" Name="myMap" Center="40.6393791,-8.6621375" ZoomLevel="10"
-               CredentialsProvider="BING_MAPS_KEY" Mode="Road">
+               CredentialsProvider="NXJmFr6B4HAelhqfhkAr~m1Sa31jOEEN2wZI-M3zyGw~AuObpNF48mjUjsmQm2-tYl4OoBX6j694lkvva6iuW29Ml6bjAZsErE6NZZd13vPN" Mode="Road">
         </m:Map>
 
         <!-- Botão "Voltar à Página Inicial" -->
