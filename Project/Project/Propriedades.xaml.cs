@@ -24,5 +24,21 @@ namespace Project
         {
             InitializeComponent();
         }
+
+        /* Botão "Voltar à Página Inicial" */
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
+        }
+
+        /* Botão "Adicionar Propriedade" */
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            //NavigationService ns = NavigationService.GetNavigationService(this);
+            //ns.Navigate(new Uri("AdicionarPropriedade.xaml", UriKind.Relative));
+            Project.AdicionarProp popup = new Project.AdicionarProp();
+            popup.Show();
+        }
     }
 }
