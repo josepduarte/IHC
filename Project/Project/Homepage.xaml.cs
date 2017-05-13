@@ -29,6 +29,17 @@ namespace Project
         {
             Propriedades PaginaPropriedades = new Propriedades();
             this.NavigationService.Navigate(PaginaPropriedades);
+
+            for (int i = 0; i < GlobalVars.numItem; i++)
+            {
+                Button btn = new Button();
+                btn.Content = GlobalVars.items[i];
+                btn.Height = 100;
+                btn.HorizontalContentAlignment = HorizontalAlignment.Left;
+                //propPage.listBox.Items.Add(btn);
+                PaginaPropriedades.buttonContainer.Children.Add(btn);
+            }
+                //PaginaPropriedades.listBox.Items.Add(GlobalVars.items[i]);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

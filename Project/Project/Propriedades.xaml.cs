@@ -37,7 +37,6 @@ namespace Project
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
             ns.Navigate(new Uri("Add_Propriedade.xaml", UriKind.Relative));
-            
         }
     }
 }

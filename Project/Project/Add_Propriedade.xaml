@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project"
-        mc:Ignorable="d" 
+        mc:Ignorable="d"
         d:DesignHeight="768" d:DesignWidth="1366"
         Title="Add_Propriedade">
 
@@ -49,14 +49,23 @@
                      Text="{Binding concelho}" VerticalAlignment="Top" Width="558" Margin="490,403,0,0"
                      BorderBrush="Gray" BorderThickness="1"/>
 
-                <Label x:Name="label4" Content="Coordenadas:" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                       Margin="309,501,0,0" FontSize="25"/>
+                <Label x:Name="label4" Content="Coordenada-Latitude:" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Margin="309,488,0,0" FontSize="25"/>
                 <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" 
-                         Text="{Binding coord}" VerticalAlignment="Top" Width="558" Margin="490,514,0,0"
+                         Text="{Binding coordX}" VerticalAlignment="Top" Width="432" Margin="616,501,0,0"
                          BorderBrush="Gray" BorderThickness="1"/>
 
-                <Button x:Name="button" Content="Confirmar" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                <Label x:Name="label5" Content="Coordenada-Longitude:" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Margin="309,523,0,0" FontSize="25"/>
+                <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" 
+                         Text="{Binding coordY}" VerticalAlignment="Top" Width="432" Margin="616,536,0,0"
+                         BorderBrush="Gray" BorderThickness="1"/>
+
+                <Button x:Name="button" Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" 
                     Width="127" Margin="921,618,0,0" Height="40" FontSize="20" Click="button_Click_1" />
+
+                <Button x:Name="button1" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Top"
+                    Width="127" Margin="754,618,0,0" Height="40" FontSize="20" Background="Red" Click="button_Click_2" />
             </Grid>
         </Grid>
     </Border>
