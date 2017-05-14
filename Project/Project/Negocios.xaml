@@ -53,10 +53,10 @@
                         <RowDefinition Height="9*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <ListBox  Name="negociosListBox" Margin="20" ItemsSource="{Binding Source={StaticResource Negocios}}">
+                    <ListBox  MouseLeftButtonUp="stack_detail" Name="negociosListBox" Margin="20" ItemsSource="{Binding Source={StaticResource Negocios}}">
                         <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Margin="5">
+                            <DataTemplate >
+                                <StackPanel Name="sp_data" Margin="5"  >
                                     <Label FontSize="20px" Foreground="AntiqueWhite"  Content="{Binding Path=cliente}"></Label>
                                     <Label Foreground="AntiqueWhite" Content="{Binding Path=inicio}"></Label>
                                 </StackPanel>

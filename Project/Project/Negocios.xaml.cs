@@ -44,6 +44,13 @@ namespace Project
             Add_Negocio PaginaAddNegocio = new Add_Negocio();
             this.NavigationService.Navigate(PaginaAddNegocio);
         }
+
+        private void stack_detail(object sender, MouseButtonEventArgs e)
+        {
+            Negocio_detalhe detalhePage = new Negocio_detalhe(this.negociosListBox.SelectedItem);
+            this.NavigationService.Navigate(detalhePage);
+         
+        }
     }
     public class Negocio
     {

@@ -26,26 +26,41 @@
                     Voltar à Página Inicial
                 </Button>
             </Grid>
-            
-            <Grid Grid.Row="1" Background="#FF2E7D32">
-                <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 100">
-                    <StackPanel>
-                        <StackPanel Margin="0 10" Orientation="Horizontal">
-                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Nome:   "/>
-                            <TextBox Name="textbox_nome" BorderBrush="#1B5E20" FontSize="24px"/>
-                        </StackPanel>
-                        <StackPanel Margin="0 10" Orientation="Horizontal">
-                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Contacto:   "/>
-                            <TextBox Name="textbox_contacto" BorderBrush="#1B5E20" FontSize="24px" />
-                        </StackPanel>
-                       
-                        <StackPanel Margin="0 10" Orientation="Horizontal">
-                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Descrição:   " />
-                            <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="400" AcceptsReturn="True" Name="textbox_descricao" BorderBrush="#1B5E20"  />
-                        </StackPanel>
-                        <Button Name="guardar" Content="Guardar" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 40"/>
+
+            <Grid Grid.Row="1" Background="#FF2E7D32" >
+                <StackPanel Margin="20"  >
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Label FontSize="20px" Foreground="White" FontWeight="Bold" Content="Cliente: "></Label>
+                        <Label FontSize="20px" Foreground="AntiqueWhite" Content="{Binding Path=cliente}"></Label>
                     </StackPanel>
-                </Grid>
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Label FontSize="20px" Foreground="White" FontWeight="Bold" Content="Morada: "></Label>
+                        <Label FontSize="20px" Foreground="AntiqueWhite" Content="{Binding Path=morada}"></Label>
+                    </StackPanel>
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Label FontSize="20px" Foreground="White" FontWeight="Bold" Content="Contacto: "></Label>
+                        <Label FontSize="20px" Foreground="AntiqueWhite" Content="{Binding Path=contacto}"></Label>
+                    </StackPanel>
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Label FontSize="20px" Foreground="White" FontWeight="Bold" Content="Contacto: "></Label>
+                        <TextBlock VerticalAlignment="Center" FontSize="20px" Foreground="AntiqueWhite">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}Desde {0} até {1}.">
+                                    <Binding Path="inicio" />
+                                    <Binding Path="fim" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Label FontSize="20px" Foreground="White" FontWeight="Bold" Content="Descrição: "></Label>
+                        <Label FontSize="20px" Foreground="AntiqueWhite" Content="{Binding Path=descricao}"></Label>
+                    </StackPanel>
+
+                    <Button Background="LightSalmon" BorderBrush="LightSalmon" Content="Apagar"  Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Click="Apagar_negocio"/>
+
+
+                </StackPanel>
             </Grid>
         </Grid>
     </Border>
