@@ -67,13 +67,19 @@ namespace Project
                 btn.HorizontalContentAlignment = HorizontalAlignment.Left;
                 propPage.buttonContainer.Children.Add(btn);
             }
-                
 
-            var pushpinText = string.Format("P{0}", Pins.numPin++);
-            Pushpin pin = new Pushpin();
-            pin.Content = pushpinText;
-            pin.Location = new Location(coordX, coordY);
-            propPage.myMap.Children.Add(pin);
+            Pins.cx[Pins.numPin] = coordX;
+            Pins.cy[Pins.numPin] = coordY;
+            Pins.numPin++;
+
+            for (int i = 0; i < Pins.numPin; i++)
+            {
+                var pushpinText = string.Format("P{0}", i);
+                Pushpin pin = new Pushpin();
+                pin.Content = pushpinText;
+                pin.Location = new Location(Pins.cx[i], Pins.cy[i]);
+                propPage.myMap.Children.Add(pin);
+            }
         }
 
         /* botão "Cancelar"*/
@@ -90,6 +96,15 @@ namespace Project
                 btn.HorizontalContentAlignment = HorizontalAlignment.Left;
                 propPage.buttonContainer.Children.Add(btn);
             }
+
+            for (int i = 0; i < Pins.numPin; i++)
+            {
+                var pushpinText = string.Format("P{0}", i);
+                Pushpin pin = new Pushpin();
+                pin.Content = pushpinText;
+                pin.Location = new Location(Pins.cx[i], Pins.cy[i]);
+                propPage.myMap.Children.Add(pin);
+            }
         }
     }
 
@@ -102,7 +117,8 @@ namespace Project
     public static class Pins
     {
         public static int numPin = 0;
-        public static Pushpin[] pins = new Pushpin[100];
+        public static double[] cx = new double[100];
+        public static double[] cy = new double[100];
     }
 
 }

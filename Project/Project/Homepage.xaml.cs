@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Maps.MapControl.WPF;
 
 namespace Project
 {
@@ -37,10 +38,17 @@ namespace Project
                 btn.Content = GlobalVars.items[i];
                 btn.Height = 100;
                 btn.HorizontalContentAlignment = HorizontalAlignment.Left;
-                //propPage.listBox.Items.Add(btn);
                 PaginaPropriedades.buttonContainer.Children.Add(btn);
             }
-                //PaginaPropriedades.listBox.Items.Add(GlobalVars.items[i]);
+
+            for (int i = 0; i < Pins.numPin; i++)
+            {
+                var pushpinText = string.Format("P{0}", i);
+                Pushpin pin = new Pushpin();
+                pin.Content = pushpinText;
+                pin.Location = new Location(Pins.cx[i], Pins.cy[i]);
+                PaginaPropriedades.myMap.Children.Add(pin);
+            }
         }
 
         /* Botão "Negócios" */
@@ -99,10 +107,5 @@ namespace Project
             this.NavigationService.Navigate(PaginaAdmin);
         }
 
-        /* Botão "Ajuda" */
-        private void Button_Click_8(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("-Para visualizar e adicionar novas Propriedades => Clicar em 'Propriedades'.\n\n-Para visualizar e adicionar novos Negócios => Clicar em 'Negócios'\n\n-Para visualizar e adicionar novas Encomendas => Clicar em 'Encomendas'\n\n-Para visualizar e adicionar novos Materiais => Clicar em 'Material'\n\n-Para visualizar o seu Histórico => Clicar em 'Histórico'\n\n-Para visualizar a sua página de Admin => Clicar em 'Administração'\n\n-Para visualizar o seu stock de madeira => Clicar em 'Stock'\n\n-Para sair da Aplicação => Clicar em 'Sair'\n\n", "Informação", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
     }
 }
