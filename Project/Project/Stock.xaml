@@ -28,7 +28,58 @@
             </Grid>
 
             <Grid Grid.Row="1" >
+                <Label x:Name="label3" Content="O meu stock de madeira:"
+                   HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Margin="309,78,0,0"/>
+
+                <Label x:Name="label" Content="Eucalipto:" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                   Margin="309,184,0,0" FontSize="25"/>
+                <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" 
+                     Text="" VerticalAlignment="Top" Width="521" Margin="527,197,0,0"
+                     BorderBrush="Gray" BorderThickness="1"/>
+
+                <Label x:Name="label1" Content="Sobreiro:" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                   Margin="309,237,0,0" FontSize="25"/>
+                <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" 
+                     Text="" VerticalAlignment="Top" Width="521" Margin="527,250,0,0"
+                     BorderBrush="Gray" BorderThickness="1"/>
+
+                <Label x:Name="label2" Content="Pinheiro:" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                   Margin="309,287,0,0" FontSize="25"/>
+                <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" 
+                     Text="" VerticalAlignment="Top" Width="521" Margin="527,301,0,0"
+                     BorderBrush="Gray" BorderThickness="1"/>
                 
+                <!-- Os seguintes labels e textboxes devem aparecer quando adicionamos uma nova madeira (mudar a Visibility) -->
+                <Label x:Name="label4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Margin="309,341,0,0" FontSize="25" />
+                <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" 
+                         Text="" VerticalAlignment="Top" Width="521" Margin="527,355,0,0"
+                         BorderBrush="Gray" BorderThickness="1" Visibility="Hidden"/>
+
+                <Label x:Name="label5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Margin="309,393,0,0" FontSize="25" Width="69" />
+                <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" 
+                         Text="" VerticalAlignment="Top" Width="521" Margin="527,406,0,0"
+                         BorderBrush="Gray" BorderThickness="1" Visibility="Hidden"/>
+
+                <Label x:Name="label6" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Margin="309,452,0,0" FontSize="25" Width="69" />
+                <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" 
+                         Text="" VerticalAlignment="Top" Width="521" Margin="527,465,0,0"
+                         BorderBrush="Gray" BorderThickness="1" Visibility="Hidden" />
+
+                <Label x:Name="label7" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Margin="309,509,0,0" FontSize="25" Width="69" />
+                <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" 
+                         Text="" VerticalAlignment="Top" Width="521" Margin="527,522,0,0"
+                         BorderBrush="Gray" BorderThickness="1" Visibility="Hidden"/>
+
+
+                <Button x:Name="button" Content="Atualizar Informação" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    Width="225" Margin="822,618,0,0" Height="40" FontSize="20" />
+
+                <Button x:Name="button1" Content="Adicionar Madeira" HorizontalAlignment="Left" VerticalAlignment="Top"
+                    Width="225" Margin="559,618,0,0" Height="40" FontSize="20" />
             </Grid>
         </Grid>
     </Border>
