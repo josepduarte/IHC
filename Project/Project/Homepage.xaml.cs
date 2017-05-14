@@ -91,5 +91,12 @@ namespace Project
             }
             
         }
+
+        /* Botão "Administração" */
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            Administracao PaginaAdmin = new Administracao();
+            this.NavigationService.Navigate(PaginaAdmin);
+        }
     }
 }

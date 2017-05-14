@@ -69,7 +69,7 @@
                         </Grid.ColumnDefinitions>
 
                         <Button Style="{DynamicResource MaterialDesignRaisedButton}" FontSize="20px" Grid.Column="0" Height="Auto" Margin="10 10 10 10" Content="Histórico" Click="Button_Click_4"/>
-                        <Button Style="{DynamicResource MaterialDesignRaisedButton}" FontSize="20px" Grid.Column="1" Height="Auto" Margin="10 10 10 10" Content="Administração"/>
+                        <Button Style="{DynamicResource MaterialDesignRaisedButton}" FontSize="20px" Grid.Column="1" Height="Auto" Margin="10 10 10 10" Content="Administração" Click="Button_Click_7" />
 
                     </Grid>
                     <Grid Grid.Row="3">
