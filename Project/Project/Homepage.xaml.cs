@@ -77,5 +77,19 @@ namespace Project
             Stock PaginaStock = new Stock();
             this.NavigationService.Navigate(PaginaStock);
         }
+
+        /* Botão "Sair" */
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+
+            if (MessageBox.Show("Tem a certeza que quer sair da Aplicação?", "Confirmação", MessageBoxButton.YesNo, MessageBoxImage.Exclamation) == MessageBoxResult.Yes)
+                Environment.Exit(1);
+            else
+            {
+                Homepage PaginaInicial = new Homepage();
+                this.NavigationService.Navigate(PaginaInicial);
+            }
+            
+        }
     }
 }
