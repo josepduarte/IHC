@@ -122,6 +122,7 @@
     <Compile Include="Propriedades.xaml.cs">
       <DependentUpon>Propriedades.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Stock.xaml.cs" />
     <Page Include="Add_Negocio.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -172,6 +173,10 @@
     <Page Include="Propriedades.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Stock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

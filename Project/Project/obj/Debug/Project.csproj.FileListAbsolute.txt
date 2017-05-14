@@ -45,4 +45,5 @@ C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\bin\Debug\Microsoft.Maps.M
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Negocio_detalhe.g.cs
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Negocio_detalhe.baml
-C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
+C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Stock.g.cs
+C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Stock.baml

@@ -23,6 +23,11 @@ namespace Project
         public Add_Negocio()
         {
             InitializeComponent();
+            intialize_components();
+        }
+
+        public void intialize_components()
+        {
             // Nome
             textbox_nome.Text = " Insira o nome do negócio aqui. ";
             textbox_nome.Foreground = Brushes.AntiqueWhite;
@@ -66,8 +71,9 @@ namespace Project
 
             ListaNegocios.getLista().add_Negocio(cliente, contacto, morada, _inicio, _fim, descricao);
 
-            
-           // this.NavigationService.Navigate(new Negocios());
+            MessageBox.Show("Negócio criado. ");
+            this.NavigationService.Refresh();
+            intialize_components();
         }
 
         private void TextBoxMorada_GotFocus(object sender, RoutedEventArgs e)
