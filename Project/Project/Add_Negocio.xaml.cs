@@ -29,6 +29,9 @@ namespace Project
             // Contacto 
             textbox_contacto.Text = " Insira o contacto aqui. ";
             textbox_contacto.Foreground = Brushes.AntiqueWhite;
+            // Morada
+            textbox_morada.Text = "Insira a morada aqui. ";
+            textbox_morada.Foreground = Brushes.AntiqueWhite;
             // Descricao
             textbox_descricao.Text = "Insira uma descrição pessoal do negócio aqui. ";
             textbox_descricao.Foreground = Brushes.AntiqueWhite;
@@ -50,6 +53,27 @@ namespace Project
         {
             textbox_descricao.Text = "";
             textbox_descricao.Foreground = Brushes.AntiqueWhite;
+        }
+
+        private void Adicionar(object sender, RoutedEventArgs e)
+        {
+            String cliente = textbox_nome.Text;
+            int contacto = (Convert.ToInt32(textbox_contacto.Text));
+            String morada = textbox_morada.Text;
+            DateTime _inicio = Convert.ToDateTime(inicio.Text);
+            DateTime _fim = Convert.ToDateTime(fim.Text);
+            String descricao = textbox_descricao.Text;
+
+            ListaNegocios.getLista().add_Negocio(cliente, contacto, morada, _inicio, _fim, descricao);
+
+            
+           // this.NavigationService.Navigate(new Negocios());
+        }
+
+        private void TextBoxMorada_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textbox_morada.Text = "";
+            textbox_morada.Foreground = Brushes.AntiqueWhite;
         }
     }
 }

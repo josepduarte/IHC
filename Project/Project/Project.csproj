@@ -116,6 +116,9 @@
     <Compile Include="Negocios.xaml.cs">
       <DependentUpon>Negocios.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Negocio_detalhe.xaml.cs">
+      <DependentUpon>Negocio_detalhe.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Propriedades.xaml.cs">
       <DependentUpon>Propriedades.xaml</DependentUpon>
     </Compile>
@@ -159,6 +162,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Negocios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Negocio_detalhe.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
