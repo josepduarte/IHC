@@ -5,10 +5,40 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Project"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="768" d:DesignWidth="1366"
       Title="Historico">
 
-    <Grid>
-        
-    </Grid>
+    <Border Padding="5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="13*"/>
+            </Grid.RowDefinitions>
+            <Grid Background="#1B5E20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label VerticalAlignment="Center" Grid.Column="0" Foreground="White" FontSize="16px" Margin="10" FontWeight="DemiBold">
+                    Gestão de Atividade Madeireira
+                </Label>
+                <Button  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Margin="10" Click="Button_Click" >
+                    Voltar à Página Inicial
+                </Button>
+            </Grid>
+
+            <Grid Grid.Row="1" >
+                <Grid Margin="400,100,399.8,125">
+                    <Border BorderBrush="Black" BorderThickness="2">
+                        <ScrollViewer x:Name="scrollviewer" VerticalScrollBarVisibility="Visible" >
+
+                        </ScrollViewer>
+                    </Border>
+                    <Button x:Name="button" FontSize="20" Height="Auto" Margin="0,504,295,-73" Click="button_Click_1"  >
+                        <TextBlock Text="Apagar Histórico" VerticalAlignment="Center" />
+                    </Button>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
 </Page>
