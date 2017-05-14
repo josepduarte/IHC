@@ -20,9 +20,26 @@ namespace Project
     /// </summary>
     public partial class Encomendas : Page
     {
+        static public int numEncomendas = 0;
+        static public string[] encomendas = new string[100];
+
         public Encomendas()
         {
             InitializeComponent();
+        }
+
+        /* Botão "Voltar à Página Inicial" */
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
+        }
+
+        /* Botão "Adicionar Encomenda" */
+        private void button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("Add_Encomenda.xaml", UriKind.Relative));
         }
     }
 }

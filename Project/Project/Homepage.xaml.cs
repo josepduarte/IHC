@@ -25,6 +25,7 @@ namespace Project
             InitializeComponent();
         }
 
+        /* Botão "Propriedades" */
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Propriedades PaginaPropriedades = new Propriedades();
@@ -42,28 +43,39 @@ namespace Project
                 //PaginaPropriedades.listBox.Items.Add(GlobalVars.items[i]);
         }
 
+        /* Botão "Negócios" */
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Negocios PaginaNegocios = new Negocios();
             this.NavigationService.Navigate(PaginaNegocios);
         }
 
+        /* Botão "Encomendas" */
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             Encomendas PaginaEncomendas = new Encomendas();
             this.NavigationService.Navigate(PaginaEncomendas);
         }
 
+        /* Botão "Material" */
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             Material PaginaMaterial = new Material();
             this.NavigationService.Navigate(PaginaMaterial);
         }
 
+        /* Botão "Histórico" */
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             Historico PaginaHistorico = new Historico();
             this.NavigationService.Navigate(PaginaHistorico);
+        }
+
+        /* Botão "Stock" */
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            Stock PaginaStock = new Stock();
+            this.NavigationService.Navigate(PaginaStock);
         }
     }
 }

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Project
 {
     /// <summary>
-    /// Interaction logic for Material.xaml
+    /// Interaction logic for Stock.xaml
     /// </summary>
-    public partial class Material : Page
+    public partial class Stock : Page
     {
-        public Material()
+        public Stock()
         {
             InitializeComponent();
         }
@@ -30,13 +30,6 @@ namespace Project
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
             ns.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
-        }
-
-        /* Botão "Adicionar Encomenda" */
-        private void button_Click_1(object sender, RoutedEventArgs e)
-        {
-            NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new Uri("Add_Material.xaml", UriKind.Relative));
         }
     }
 }

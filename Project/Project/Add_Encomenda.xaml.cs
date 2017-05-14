@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Project
 {
     /// <summary>
-    /// Interaction logic for Material.xaml
+    /// Interaction logic for Add_Encomenda.xaml
     /// </summary>
-    public partial class Material : Page
+    public partial class Add_Encomenda : Page
     {
-        public Material()
+        public Add_Encomenda()
         {
             InitializeComponent();
         }
@@ -28,15 +28,22 @@ namespace Project
         /* Botão "Voltar à Página Inicial" */
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
+            Homepage PaginaInicial = new Homepage();
+            this.NavigationService.Navigate(PaginaInicial);
         }
 
-        /* Botão "Adicionar Encomenda" */
+        /* Botão "Ok" */
         private void button_Click_1(object sender, RoutedEventArgs e)
         {
-            NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new Uri("Add_Material.xaml", UriKind.Relative));
+            Encomendas PaginaEncomendas = new Encomendas();
+            this.NavigationService.Navigate(PaginaEncomendas);
+        }
+
+        /* Botão "Cancelar" */
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            Encomendas PaginaEncomendas = new Encomendas();
+            this.NavigationService.Navigate(PaginaEncomendas);
         }
     }
 }
