@@ -110,6 +110,9 @@
     <Compile Include="Add_Propriedade.xaml.cs">
       <DependentUpon>Add_Propriedade.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Add_stock.xaml.cs">
+      <DependentUpon>Add_stock.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Administracao.xaml.cs">
       <DependentUpon>Administracao.xaml</DependentUpon>
     </Compile>
@@ -131,7 +134,12 @@
     <Compile Include="Propriedades.xaml.cs">
       <DependentUpon>Propriedades.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Stock.xaml.cs" />
+    <Compile Include="Stock.xaml.cs">
+      <DependentUpon>Stock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Update_stock.xaml.cs">
+      <DependentUpon>Update_stock.xaml</DependentUpon>
+    </Compile>
     <Page Include="Add_Encomenda.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -147,6 +155,10 @@
     <Page Include="Add_Propriedade.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Add_stock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Administracao.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -198,6 +210,10 @@
     <Page Include="Stock.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Update_stock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

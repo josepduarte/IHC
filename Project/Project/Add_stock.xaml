@@ -1,12 +1,12 @@
-﻿<Page x:Class="Project.Add_Material"
+﻿<Page x:Class="Project.Add_stock"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Project"
       mc:Ignorable="d" 
-      d:DesignHeight="768" d:DesignWidth="1366"
-      Title="Add_Material">
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Add_stock">
 
     <Border Padding="5">
         <Grid>
@@ -20,7 +20,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Label VerticalAlignment="Center" Grid.Column="0" Foreground="White" FontSize="16px" Margin="10" FontWeight="DemiBold">
-                    Gestão de Atividade Madeireira - Adicionar Material
+                    Gestão de Atividade Madeireira - Adicionar Tipo de Madeira
                 </Label>
                 <Button  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Margin="10" Click="Button_Click_1">
                     Voltar à Página Inicial
@@ -31,21 +31,14 @@
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 100">
                     <StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
-                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Tipo:   "/>
+                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Tipo de madeira:   "/>
                             <TextBox Name="textbox_tipo" BorderBrush="#1B5E20" FontSize="24px" GotFocus="textbox_tipo_GotFocus"/>
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
-                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Quantidade:   " />
-                            <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="400" AcceptsReturn="True" Name="textbox_quantidade" BorderBrush="#1B5E20" GotFocus="TextBox_quantidade_GotFocus" />
+                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Quantidade:   "/>
+                            <TextBox Name="textbox_quantidade" BorderBrush="#1B5E20" FontSize="24px" GotFocus="textbox_quantidade_GotFocus"/>
                         </StackPanel>
-                        <StackPanel Margin="0 10" Orientation="Horizontal">
-                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Unidade:   " />
-                            <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="400" AcceptsReturn="True" Name="textbox_unidade" BorderBrush="#1B5E20" GotFocus="TextBox_unidade_GotFocus" />
-                        </StackPanel>
-                        <StackPanel Margin="0 10" Orientation="Horizontal">
-                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Descricao:   "/>
-                            <TextBox Name="textbox_descricao" BorderBrush="#1B5E20" FontSize="24px" GotFocus="textbox_descricao_GotFocus"/>
-                        </StackPanel>
+                        
 
                         <Button Name="guardar" Content="Guardar" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 40" Click="Adicionar"/>
                     </StackPanel>

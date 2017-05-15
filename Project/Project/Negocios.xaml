@@ -32,7 +32,7 @@
                 <Label VerticalAlignment="Center" Grid.Column="0" Foreground="White" FontSize="16px" Margin="10" FontWeight="DemiBold">
                     Gestão de Atividade Madeireira - Ver Negócios
                 </Label>
-                <Button  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Margin="10">
+                <Button  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Margin="10" Click="Button_Click_1">
                     Voltar à Página Inicial
                 </Button>
             </Grid>
