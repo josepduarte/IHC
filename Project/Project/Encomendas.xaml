@@ -20,24 +20,52 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Label VerticalAlignment="Center" Grid.Column="0" Foreground="White" FontSize="16px" Margin="10" FontWeight="DemiBold">
-                    Gestão de Atividade Madeireira
+                    Gestão de Atividade Madeireira - Encomendas
                 </Label>
                 <Button  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Margin="10" Click="Button_Click" >
                     Voltar à Página Inicial
                 </Button>
             </Grid>
 
-            <Grid Grid.Row="1" >
-                <Grid Margin="400,100,399.8,125">
-                    <Border BorderBrush="Black" BorderThickness="2">
-                        <ScrollViewer x:Name="scrollviewer" VerticalScrollBarVisibility="Visible" >
+            <Grid Grid.Row="1" Background="#FF2E7D32">
+                <Grid.Resources>
+                    <local:ListaEncomendas x:Key="Encomendas"/>
+                </Grid.Resources>
 
-                        </ScrollViewer>
-                    </Border>
-                    <Button x:Name="button" FontSize="20" Height="Auto" Margin="0,504,295,-73" Click="button_Click_1">
-                        <TextBlock Text="Adicionar Encomenda" VerticalAlignment="Center" />
-                    </Button>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <ListBox Grid.Row="0" Name="encomendasListBox" Margin="20" ItemsSource="{Binding Source={StaticResource Encomendas}}" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0" Margin="20"  >
+                                        <Label FontSize="20px" Foreground="AntiqueWhite"  Content="{Binding Path=cliente}"></Label>
+                                        <Label Foreground="AntiqueWhite" Content="{Binding Path=contacto}"></Label>
+                                        <Label Foreground="AntiqueWhite" Content="{Binding Path=morada}"></Label>
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1" Margin="20" HorizontalAlignment="Center">
+                                        <Label Foreground="AntiqueWhite"  Content="{Binding Path=preco}"></Label>
+                                        <Label Foreground="AntiqueWhite" Content="{Binding Path=quantidade}"></Label>
+                                        <Label Foreground="AntiqueWhite" Content="{Binding Path=data}"></Label>
+                                    </StackPanel>
+                                    
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <StackPanel Grid.Row="1"  Margin="20" HorizontalAlignment="Left" Orientation="Horizontal" >
+                        <Button Content="Apagar" Background="LightSalmon" BorderBrush="LightSalmon" VerticalAlignment="Center" Click="Apagar_encomenda"/>
+                        <Button Margin="10 0" Content="Adicionar Encomenda" VerticalAlignment="Center" Click="Adicionar_encomenda"/>
+                    </StackPanel>
                 </Grid>
+
             </Grid>
         </Grid>
     </Border>

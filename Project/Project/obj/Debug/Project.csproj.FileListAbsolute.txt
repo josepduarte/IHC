@@ -47,3 +47,7 @@ C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\GeneratedInterna
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Negocio_detalhe.baml
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Stock.g.cs
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Stock.baml
+C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Administracao.g.cs
+C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Administracao.baml
+C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Add_Encomenda.g.cs
+C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Add_Encomenda.baml

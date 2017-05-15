@@ -40,10 +40,12 @@
             <Grid Grid.Row="1" Background="#FF2E7D32">
                 <Grid.Resources>
                     <local:ListaNegocios x:Key="Negocios"/>
-                </Grid.Resources>                <Grid.ColumnDefinitions>
+                </Grid.Resources>
+                <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="3*"/>
-                </Grid.ColumnDefinitions>
+                </Grid.ColumnDefinitions>
+
                 <Calendar Name="CalendarNegocios" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
                     
                 </Calendar>
