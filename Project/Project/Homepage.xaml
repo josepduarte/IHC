@@ -29,6 +29,9 @@
 
             </Grid>
             <Grid Grid.Row="1" Background="#FF2E7D32">
+                <Grid.Resources>
+                    <local:ListaNegocios x:Key="Negocios"/>
+                </Grid.Resources>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="*"/>
@@ -111,23 +114,24 @@
                         </Viewbox>
                     </Grid>
 
-                    <ListBox Foreground="White" FontSize="20px">
-                        <StackPanel  Orientation="Horizontal">
-                            <Label Foreground="White" Content="Data" Margin="100 0 0 0"></Label>
-                            <Label Foreground="White" Content="Temp" Margin="100 0 0 0"></Label>
-                        </StackPanel>
-                        <StackPanel  Orientation="Horizontal">
-                            <Label Foreground="White" Content="Data" Margin="100 0 0 0"></Label>
-                            <Label Foreground="White" Content="Temp" Margin="100 0 0 0"></Label>
-                        </StackPanel>
-                        <StackPanel  Orientation="Horizontal">
-                            <Label Foreground="White" Content="Data" Margin="100 0 0 0"></Label>
-                            <Label Foreground="White" Content="Temp" Margin="100 0 0 0"></Label>
-                        </StackPanel>
-                        <StackPanel  Orientation="Horizontal">
-                            <Label Foreground="White" Content="Data" Margin="100 0 0 0"></Label>
-                            <Label Foreground="White" Content="Temp" Margin="100 0 0 0"></Label>
-                        </StackPanel>
+                    <Grid Margin="100 0 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Label Grid.Column="0" FontSize="20px" Foreground="White" Background="#1B5E20" Content="Data" ></Label>
+                        <Label Grid.Column="1" FontSize="20px" Foreground="White" Background="#1B5E20" Content="Precipitaçao" ></Label>
+                    </Grid>
+                    <ListBox Margin="100 0 0 0" ItemsSource="{Binding Source={StaticResource Negocios}}" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label  Foreground="White" FontSize="20px" Content="{Binding Path=inicio}"></Label>
+                                    <Label  Margin="100 0 0 0" Foreground="White" FontSize="20px" Content="{Binding Path=precipitacao}"></Label>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
                     </ListBox>
                 </StackPanel>
             </Grid>

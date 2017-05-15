@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
 
 namespace Project
 {
@@ -31,7 +32,17 @@ namespace Project
         {
             Console.WriteLine("Blaaaaa: ");
             Console.WriteLine(negocios);
-           // negocios.CalendarNegocios.SelectedDates.Add(date);
+            try {
+                negocios.CalendarNegocios.SelectedDates.Add(date);
+            }
+            catch
+            {
+                Console.WriteLine("rebentou");
+            }
+        }
+        public static Negocios get_negocios()
+        {
+            return negocios;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -51,6 +62,12 @@ namespace Project
             this.NavigationService.Navigate(detalhePage);
          
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
+        }
     }
     public class Negocio
     {
@@ -60,6 +77,8 @@ namespace Project
         private DateTime _inicio;
         private DateTime _fim;
         private string _descricao;
+        private string _precipitacao;
+        
 
 
         public string cliente
@@ -92,17 +111,23 @@ namespace Project
             get { return _descricao; }
             set { _descricao = value; }
         }
+        public string precipitacao
+        {
+            get { return _precipitacao; }
+            set { _precipitacao = value; }
+        }
 
     }
 
     public class ListaNegocios : ObservableCollection<Negocio>
     {
         static ListaNegocios lista = new ListaNegocios();
+        private Random rnd = new Random();
         public ListaNegocios()
         {
             add_Negocio("Matilde Guimarães", 234824022, "Rua dos cordelinhos", Convert.ToDateTime("2017-05-10"), Convert.ToDateTime("2017-05-10"), "2000 m2 de eucaliptos");
             add_Negocio("Carla Antónia", 234124012, "Rua das Azeitonas, nº23", Convert.ToDateTime("2017-06-12"), Convert.ToDateTime("2017-08-12"), "6000 m2 de pinheiros");
-            add_Negocio("Joaquim Manel", 232412312, "Rua dos Sobreiros", Convert.ToDateTime("2017-10-12"), Convert.ToDateTime("2017-11-12"), "2000 m2 de sobreiros");
+            add_Negocio("Joaquim Manel", 232412312, "Rua dos Sobreiros", Convert.ToDateTime("2017-9-12"), Convert.ToDateTime("2017-11-12"), "2000 m2 de sobreiros");
             lista = this;
 
         }
@@ -110,14 +135,26 @@ namespace Project
         {
             return lista;
         }
+
+        //private static readonly Random rnd = new Random();
         public void add_Negocio(string cliente, int contacto, string morada, DateTime inicio, DateTime fim, string descricao)
         {
-            this.Add(new Negocio { cliente = cliente, contacto = contacto, morada = morada, inicio = inicio, fim = fim, descricao = descricao });
+            //Random rnd = new Random();
+            string precipitacao = String.Concat(Convert.ToString(this.rnd.Next(1, 10) * 10), "%");
+
+            this.Add(new Negocio { cliente = cliente, contacto = contacto, morada = morada, inicio = inicio, fim = fim, descricao = descricao, precipitacao = precipitacao });
+            /*
+            String url = "api.openweathermap.org/data/2.5/forecast/daily?id=524901&APPID=90933764d690fab7366a6029e0c411a6";
+            XmlReader reader = XmlReader.Create(url);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(reader);
+            reader.Close();
+            */
 
             // Select dates in calendar
-           // Negocios.selectDate(inicio);
-           // DateTime temp_inicio = inicio.AddDays(1);
-          //  Negocios.selectDate(temp_inicio);
+            //Negocios.selectDate(inicio);
+            // DateTime temp_inicio = inicio.AddDays(1);
+            //  Negocios.selectDate(temp_inicio);
         }
     }
 

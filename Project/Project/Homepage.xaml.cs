@@ -106,6 +106,5 @@ namespace Project
             Administracao PaginaAdmin = new Administracao();
             this.NavigationService.Navigate(PaginaAdmin);
         }
-
     }
 }

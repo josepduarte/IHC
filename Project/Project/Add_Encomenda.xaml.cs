@@ -96,8 +96,10 @@ namespace Project
                 DateTime _data = Convert.ToDateTime(data.Text);
                 String tipo_madeira = textbox_tipo_madeira.Text;
                 String quantidade = textbox_quantidade.Text;
-                double preco = (Convert.ToDouble(textbox_preco.Text));
+                String preco = textbox_preco.Text;
 
+                double temp = Convert.ToDouble(preco);
+                
                 ListaEncomendas.getLista().add_Encomenda(cliente, contacto, morada, tipo_madeira, quantidade, preco, _data);
 
                 MessageBox.Show("Encomenda criada. ");
@@ -108,6 +110,12 @@ namespace Project
             {
                 MessageBox.Show("Erro na introdução dos dados. ");
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
         }
     }
 }

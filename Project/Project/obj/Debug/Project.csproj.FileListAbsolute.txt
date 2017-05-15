@@ -53,4 +53,3 @@ C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Add_Encomenda.g.
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Add_Encomenda.baml
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Add_Material.g.cs
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Add_Material.baml
-C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache

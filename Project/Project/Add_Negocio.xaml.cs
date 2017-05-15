@@ -81,5 +81,11 @@ namespace Project
             textbox_morada.Text = "";
             textbox_morada.Foreground = Brushes.AntiqueWhite;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
+        }
     }
 }

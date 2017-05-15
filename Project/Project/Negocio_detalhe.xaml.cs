@@ -43,10 +43,23 @@ namespace Project
             DateTime fim = Convert.ToDateTime(TypeDescriptor.GetProperties(this.DataContext)["cliente"].GetValue(this.DataContext));
             String descricao = Convert.ToString(TypeDescriptor.GetProperties(this.DataContext)["descricao"].GetValue(this.DataContext));
             **/
+            try
+            {
             Negocio toRemove = ListaNegocios.getLista().Single(r => r.cliente == cliente); // && r.contacto == contacto && r.morada == morada && (r.inicio.CompareTo(inicio) == 0) && (r.fim.CompareTo(fim) == 0) && r.descricao == descricao);
             ListaNegocios.getLista().Remove(toRemove);
             MessageBox.Show("Negócio Apagado. ");
-            //this.NavigationService.Navigate(new Negocios());
+                //this.NavigationService.Navigate(new Negocios());
+            }
+            catch
+            {
+                MessageBox.Show("Negócio não apagado. ");
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
         }
     }
 }
