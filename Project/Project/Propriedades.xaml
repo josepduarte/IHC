@@ -38,7 +38,7 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <!-- Bing Maps -->
-                <m:Map Grid.RowSpan="2" Grid.Column="1" x:Name="myMap" Center="40.6393791,-8.6621375" ZoomLevel="10" Mode="Road" 
+                <m:Map Grid.RowSpan="2" Grid.Column="1" x:Name="myMap" Center="39.607919,-8.149391" ZoomLevel="7.2" Mode="Road" 
                        CredentialsProvider="NXJmFr6B4HAelhqfhkAr~m1Sa31jOEEN2wZI-M3zyGw~AuObpNF48mjUjsmQm2-tYl4OoBX6j694lkvva6iuW29Ml6bjAZsErE6NZZd13vPN" >
                 </m:Map>
                 <Border Grid.Column="0" BorderBrush="Black" BorderThickness="2" Margin="0,10,0.2,0">
