@@ -28,7 +28,7 @@ namespace Project
         public void initialize_components()
         {
             // Nome
-            textbox_nome.Text = " Insira o nome do negócio aqui. ";
+            textbox_nome.Text = " Insira o nome aqui. ";
             textbox_nome.Foreground = Brushes.AntiqueWhite;
             // Contacto 
             textbox_contacto.Text = " Insira o contacto aqui. ";

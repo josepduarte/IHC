@@ -101,6 +101,9 @@
     <Compile Include="Add_Encomenda.xaml.cs">
       <DependentUpon>Add_Encomenda.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Add_Material.xaml.cs">
+      <DependentUpon>Add_Material.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Add_Negocio.xaml.cs">
       <DependentUpon>Add_Negocio.xaml</DependentUpon>
     </Compile>
@@ -130,6 +133,10 @@
     </Compile>
     <Compile Include="Stock.xaml.cs" />
     <Page Include="Add_Encomenda.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Add_Material.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
