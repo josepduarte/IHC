@@ -62,6 +62,11 @@ namespace Project
         {
             this.NavigationService.Navigate(new Update_stock());
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
     public class Madeira
     {

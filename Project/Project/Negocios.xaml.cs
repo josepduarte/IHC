@@ -27,6 +27,8 @@ namespace Project
         {
             InitializeComponent();
             negocios = this;
+           // CalendarNegocios.SelectedDates.Add(Convert.ToDateTime("2017-05-05"));
+           // CalendarNegocios.SelectedDates.Add(Convert.ToDateTime("2017-05-06"));
         }
         public static void selectDate(DateTime date)
         {

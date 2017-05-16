@@ -24,5 +24,16 @@ namespace Project
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("Add_Encomenda.xaml", UriKind.Relative));
+        }
+
+        private void guardar(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

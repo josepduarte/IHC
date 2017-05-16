@@ -51,7 +51,7 @@
                     <StackPanel Grid.Row="1"  Margin="20" HorizontalAlignment="Left" Orientation="Horizontal" >
                         <Button Content="Apagar Tipo de Madeira" Background="LightSalmon" BorderBrush="LightSalmon" VerticalAlignment="Center" Click="Apagar_tipo" />
                         <Button Margin="10 0" Content="Adicionar Tipo de Madeira" VerticalAlignment="Center" Click="Adicionar_tipo"  />
-                        <Button Margin="10 0" Content="Atualizar valores" Background="CadetBlue" VerticalAlignment="Center" Click="Atualizar_tipo"/>
+                        <!-- <Button Margin="10 0" Content="Atualizar valores" Background="CadetBlue" VerticalAlignment="Center" Click="Atualizar_tipo"/> -->
                     </StackPanel>
                 </Grid>
 

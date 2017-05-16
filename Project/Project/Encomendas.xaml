@@ -51,6 +51,7 @@
                                         <Label Foreground="AntiqueWhite" Content="{Binding Path=morada}"></Label>
                                     </StackPanel>
                                     <StackPanel Grid.Column="1" Margin="20" HorizontalAlignment="Center">
+                                        <Label></Label>
                                         <Label Foreground="AntiqueWhite"  Content="{Binding Path=preco}"></Label>
                                         <Label Foreground="AntiqueWhite" Content="{Binding Path=quantidade}"></Label>
                                         <Label Foreground="AntiqueWhite" Content="{Binding Path=data}"></Label>

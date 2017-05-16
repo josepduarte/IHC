@@ -49,9 +49,10 @@
                                         <Label FontSize="20px" Foreground="AntiqueWhite"  Content="{Binding Path=tipo}"></Label>
                                         <Label Foreground="AntiqueWhite" Content="{Binding Path=descricao}"></Label>
                                     </StackPanel>
+
                                     <StackPanel Grid.Column="1" Margin="20" HorizontalAlignment="Center" Orientation="Horizontal">
-                                        <Label Foreground="AntiqueWhite"  Content="{Binding Path=quantidade}"></Label>
-                                        <Label Foreground="AntiqueWhite" Content="{Binding Path=unidade}"></Label>
+                                        <Label FontSize="20px" Foreground="AntiqueWhite"  Content="{Binding Path=quantidade}"></Label>
+                                        <Label FontSize="20px" Foreground="AntiqueWhite" Content="{Binding Path=unidade}"></Label>
                                     </StackPanel>
 
                                 </Grid>

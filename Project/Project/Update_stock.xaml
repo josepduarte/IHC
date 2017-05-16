@@ -6,9 +6,67 @@
       xmlns:local="clr-namespace:Project"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
+      
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+      
       Title="Update_stock">
 
-    <Grid>
-        
-    </Grid>
+    <Border Padding="5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="13*"/>
+            </Grid.RowDefinitions>
+            <Grid Background="#1B5E20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label VerticalAlignment="Center" Grid.Column="0" Foreground="White" FontSize="16px" Margin="10" FontWeight="DemiBold">
+                    Gestão de Atividade Madeireira - Atualizar Quantidades
+                </Label>
+                <Button  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Margin="10" Click="Button_Click" >
+                    Voltar à Página Inicial
+                </Button>
+            </Grid>
+
+            <Grid Grid.Row="1" Background="#FF2E7D32">
+                <Grid.Resources>
+                    <local:ListaMadeiras x:Key="Madeiras"/>
+                </Grid.Resources>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <ListBox Grid.Row="0" Name="stockListBox" Margin="20" ItemsSource="{Binding Source={StaticResource Madeiras}}" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Grid.Column="0" Margin="20" Orientation="Horizontal" >
+                                    <Label FontSize="20px" Foreground="AntiqueWhite"  Content="{Binding Path=tipo}"></Label>
+
+                                    <Slider 
+                                            Minimum="0" 
+                                            Maximum="1000" 
+                                            Style="{DynamicResource MaterialDesignDiscreteSlider}"  />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <StackPanel Grid.Row="1"  Margin="20" HorizontalAlignment="Left" Orientation="Horizontal" >
+                        <Button Content="Guardar" VerticalAlignment="Center" Click="guardar" />
+                    </StackPanel>
+                </Grid>
+
+            </Grid>
+        </Grid>
+    </Border>
 </Page>
