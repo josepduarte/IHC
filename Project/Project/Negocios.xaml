@@ -43,33 +43,40 @@
                 <Grid.Resources>
                     <local:ListaNegocios x:Key="Negocios"/>
                 </Grid.Resources>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="3*"/>
-                </Grid.ColumnDefinitions>
 
-                <Calendar Name="CalendarNegocios" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+
+                <!-- <Calendar Name="CalendarNegocios" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10"/> -->
                     
-                </Calendar>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="9*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-                <Grid Grid.Column="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="9*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <ListBox  MouseLeftButtonUp="stack_detail" Name="negociosListBox" Margin="20" ItemsSource="{Binding Source={StaticResource Negocios}}">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate >
-                                <StackPanel Name="sp_data" Margin="5"  >
-                                    <Label FontSize="20px" Foreground="AntiqueWhite"  Content="{Binding Path=cliente}"></Label>
-                                    <Label Foreground="AntiqueWhite" Content="{Binding Path=inicio}"></Label>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                    <Button Grid.Row="1" Margin="5" HorizontalAlignment="Right" Content="Adicionar negócio" Click="Adcionar_Negocio" />
-                </Grid>
-                
+                <materialDesign:Card Margin="20">
+                    <DataGrid   ItemsSource="{Binding Source={StaticResource Negocios}}" AutoGenerateColumns="True"  ColumnWidth="*" AutoGeneratingColumn="DataGrid_AutoGeneratingColumn"  >
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Header="Precipitação" IsReadOnly="False" DisplayIndex="7" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label  Content="{Binding Path=precipitacao}"></Label>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="" IsReadOnly="True" Width="100" DisplayIndex="8">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Background="LightSalmon" BorderBrush="LightSalmon" Content="Apagar" Command="Delete"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </materialDesign:Card>
+
+
+                <Button Grid.Row="1" Margin="5" HorizontalAlignment="Right" Content="Adicionar negócio" Click="Adcionar_Negocio" />
+
             </Grid>
         </Grid>
     </Border>

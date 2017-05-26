@@ -27,7 +27,7 @@ namespace Project
         {
             InitializeComponent();
             negocios = this;
-           // CalendarNegocios.SelectedDates.Add(Convert.ToDateTime("2017-05-05"));
+            //CalendarNegocios.SelectedDates.Add(Convert.ToDateTime("2017-05-18"));
            // CalendarNegocios.SelectedDates.Add(Convert.ToDateTime("2017-05-06"));
         }
         public static void selectDate(DateTime date)
@@ -35,7 +35,7 @@ namespace Project
             Console.WriteLine("Blaaaaa: ");
             Console.WriteLine(negocios);
             try {
-                negocios.CalendarNegocios.SelectedDates.Add(date);
+           //     negocios.CalendarNegocios.SelectedDates.Add(date);
             }
             catch
             {
@@ -60,8 +60,8 @@ namespace Project
 
         private void stack_detail(object sender, MouseButtonEventArgs e)
         {
-            Negocio_detalhe detalhePage = new Negocio_detalhe(this.negociosListBox.SelectedItem);
-            this.NavigationService.Navigate(detalhePage);
+// Negocio_detalhe detalhePage = new Negocio_detalhe(this.negociosListBox.SelectedItem);
+//            this.NavigationService.Navigate(detalhePage);
          
         }
 
@@ -69,6 +69,14 @@ namespace Project
         {
             NavigationService ns = NavigationService.GetNavigationService(this);
             ns.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
+        }
+
+        private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            if (Convert.ToString(e.Column.Header) == "precipitacao")
+                e.Column.Visibility = Visibility.Collapsed;
+            else
+                e.Column.Visibility = Visibility.Visible;
         }
     }
     public class Negocio
@@ -127,9 +135,12 @@ namespace Project
         private Random rnd = new Random();
         public ListaNegocios()
         {
-            add_Negocio("Matilde Guimarães", 234824022, "Rua dos cordelinhos", Convert.ToDateTime("2017-05-10"), Convert.ToDateTime("2017-05-10"), "2000 m2 de eucaliptos");
+            add_Negocio("Matilde Guimarães", 234824022, "Rua dos cordelinhos", Convert.ToDateTime("2017-05-18"), Convert.ToDateTime("2017-05-18"), "2000 m2 de eucaliptos");
             add_Negocio("Carla Antónia", 234124012, "Rua das Azeitonas, nº23", Convert.ToDateTime("2017-06-12"), Convert.ToDateTime("2017-08-12"), "6000 m2 de pinheiros");
-            add_Negocio("Joaquim Manel", 232412312, "Rua dos Sobreiros", Convert.ToDateTime("2017-9-12"), Convert.ToDateTime("2017-11-12"), "2000 m2 de sobreiros");
+            add_Negocio("Joaquim Manel", 232412312, "Rua dos Sobreiros", Convert.ToDateTime("2017-9-12"), Convert.ToDateTime("2017-9-12"), "2000 m2 de sobreiros");
+            add_Negocio("Artur Carapau", 32423422, "Rua dos Pescados", Convert.ToDateTime("2017-9-18"), Convert.ToDateTime("2017-9-18"), "200 m2 de eucaliptos");
+            add_Negocio("Josefina Aviadora", 23411233, "Rua dos Que Levantam Voo, nº23", Convert.ToDateTime("2017-10-2"), Convert.ToDateTime("2017-10-2"), "60 m2 de pinheiros");
+            add_Negocio("Carabinda de Jesus", 232213123, "Rua dos Sobreiros", Convert.ToDateTime("2017-12-9"), Convert.ToDateTime("2017-12-9"), "2000 m2 de eucaliptos");
             lista = this;
 
         }
