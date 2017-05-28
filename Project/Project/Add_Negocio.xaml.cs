@@ -25,6 +25,13 @@ namespace Project
             InitializeComponent();
             intialize_components();
         }
+        public Add_Negocio(DateTime date)
+        {
+            InitializeComponent();
+            intialize_components();
+            inicio.SelectedDate = date;
+            fim.SelectedDate = date;
+        }
 
         public void intialize_components()
         {

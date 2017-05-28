@@ -115,7 +115,7 @@ namespace Project
 
         private void CalendarNegocios_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
-            Console.WriteLine("Selected date");
+            this.NavigationService.Navigate(new Add_Negocio((DateTime)CalendarNegocios.SelectedDate));
         }
     }
 }
