@@ -33,15 +33,15 @@
                     <StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Nome:   "/>
-                            <TextBox Name="textbox_nome" BorderBrush="#1B5E20" FontSize="24px" GotFocus="TextBoxNome_GotFocus"/>
+                            <TextBox Name="textbox_nome" Width="500" BorderBrush="#1B5E20" FontSize="24px" GotFocus="TextBoxNome_GotFocus"/>
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Contacto:   "/>
-                            <TextBox Name="textbox_contacto" BorderBrush="#1B5E20" FontSize="24px" GotFocus="TextBoxContacto_GotFocus"/>
+                            <TextBox Name="textbox_contacto" Width="500" BorderBrush="#1B5E20" FontSize="24px" GotFocus="TextBoxContacto_GotFocus"/>
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Morada:   "/>
-                            <TextBox Name="textbox_morada" BorderBrush="#1B5E20" FontSize="24px" GotFocus="TextBoxMorada_GotFocus"/>
+                            <TextBox Name="textbox_morada" Width="500" BorderBrush="#1B5E20" FontSize="24px" GotFocus="TextBoxMorada_GotFocus"/>
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Data:   "/>
@@ -49,14 +49,14 @@
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Tipo de madeira:   " />
-                            <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="400" AcceptsReturn="True" Name="textbox_tipo_madeira" BorderBrush="#1B5E20" GotFocus="TextBox_tipo_madeira_GotFocus" />
+                            <TextBox  VerticalAlignment="Top" Width="500" TextWrapping="Wrap" FontSize="24px"  AcceptsReturn="True" Name="textbox_tipo_madeira" BorderBrush="#1B5E20" GotFocus="TextBox_tipo_madeira_GotFocus" />
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Quantidade:   " />
-                            <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="400" AcceptsReturn="True" Name="textbox_quantidade" BorderBrush="#1B5E20" GotFocus="TextBox_quantidade_GotFocus" />
+                            <TextBox  VerticalAlignment="Top" Width="500" TextWrapping="Wrap" FontSize="24px"  AcceptsReturn="True" Name="textbox_quantidade" BorderBrush="#1B5E20" GotFocus="TextBox_quantidade_GotFocus" />
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
-                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Preço:   " />
+                            <Label Foreground="White" Width="100" FontWeight="Bold" FontSize="24px" Content="Preço:   " />
                             <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="400" AcceptsReturn="True" Name="textbox_preco" BorderBrush="#1B5E20" GotFocus="TextBox_preco_GotFocus" />
                         </StackPanel>
                         

@@ -6,6 +6,16 @@
       xmlns:local="clr-namespace:Project"
       mc:Ignorable="d" 
       d:DesignHeight="768" d:DesignWidth="1366"
+      
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+      
       Title="Encomendas">
 
     <Border Padding="5">
@@ -37,34 +47,25 @@
                         <RowDefinition Height="10*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <ListBox Grid.Row="0" Name="encomendasListBox" Margin="20" ItemsSource="{Binding Source={StaticResource Encomendas}}" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <StackPanel Grid.Column="0" Margin="20"  >
-                                        <Label FontSize="20px" Foreground="AntiqueWhite"  Content="{Binding Path=cliente}"></Label>
-                                        <Label Foreground="AntiqueWhite" Content="{Binding Path=contacto}"></Label>
-                                        <Label Foreground="AntiqueWhite" Content="{Binding Path=morada}"></Label>
-                                    </StackPanel>
-                                    <StackPanel Grid.Column="1" Margin="20" HorizontalAlignment="Center">
-                                        <Label></Label>
-                                        <Label Foreground="AntiqueWhite"  Content="{Binding Path=preco}"></Label>
-                                        <Label Foreground="AntiqueWhite" Content="{Binding Path=quantidade}"></Label>
-                                        <Label Foreground="AntiqueWhite" Content="{Binding Path=data}"></Label>
-                                    </StackPanel>
-                                    
-                                </Grid>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                    <StackPanel Grid.Row="1"  Margin="20" HorizontalAlignment="Left" Orientation="Horizontal" >
-                        <Button Content="Apagar" Background="LightSalmon" BorderBrush="LightSalmon" VerticalAlignment="Center" Click="Apagar_encomenda"/>
-                        <Button Margin="10 0" Content="Adicionar Encomenda" VerticalAlignment="Center" Click="Adicionar_encomenda"/>
-                    </StackPanel>
+
+                    <materialDesign:Card Margin="20">
+                        <DataGrid  ItemsSource="{Binding Source={StaticResource Encomendas}}" AutoGenerateColumns="True"  ColumnWidth="*"  >
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn Header="" IsReadOnly="True" Width="100" DisplayIndex="7">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Background="LightSalmon" BorderBrush="LightSalmon" Content="Apagar" Command="Delete" Click="Button_Click_2" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </materialDesign:Card>
+
+
+                    <Button Grid.Row="1" Margin="0 0 40 0" Content="Adicionar Encomenda" VerticalAlignment="Center" HorizontalAlignment="Right" Click="Adicionar_encomenda"/>
+
                 </Grid>
 
             </Grid>

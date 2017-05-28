@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -48,24 +49,13 @@ namespace Project
             NavigationService ns = NavigationService.GetNavigationService(this);
             ns.Navigate(new Uri("Add_Encomenda.xaml", UriKind.Relative));
         }
-
-        private void Apagar_encomenda(object sender, RoutedEventArgs e)
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                this.NavigationService.Refresh();
-                String cliente = Convert.ToString(TypeDescriptor.GetProperties(this.encomendasListBox.SelectedItem)["cliente"].GetValue(this.encomendasListBox.SelectedItem));
+            System.Windows.Controls.Button delete = (System.Windows.Controls.Button)e.OriginalSource;
+            DialogResult dialogResult = form1.Show("Confirmar remoção", "Tem a certeza que pretende apagar?", "", "Sim", "Não");
+            if (dialogResult == DialogResult.No)
+                delete.Command = ApplicationCommands.NotACommand;
 
-                Encomenda toRemove = ListaEncomendas.getLista().Single(r => r.cliente == cliente); // && r.contacto == contacto && r.morada == morada && (r.inicio.CompareTo(inicio) == 0) && (r.fim.CompareTo(fim) == 0) && r.descricao == descricao);
-                ListaEncomendas.getLista().Remove(toRemove);
-                MessageBox.Show("Encomenda Apagada. ");
-                this.NavigationService.Refresh();
-            }
-            catch{
-                MessageBox.Show("Nenhuma encomenda selecionada. ");
-                this.NavigationService.Refresh();
-            }
-            
         }
 
         private void Adicionar_encomenda(object sender, RoutedEventArgs e)

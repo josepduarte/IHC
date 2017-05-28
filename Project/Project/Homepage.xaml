@@ -61,7 +61,7 @@
                         </Grid.ColumnDefinitions>
 
                         <Button Style="{DynamicResource MaterialDesignRaisedButton}" FontSize="20px" Grid.Column="0" Height="Auto" Margin="20" Content="Encomendas" Click="Button_Click_2"/>
-                        <Button Style="{DynamicResource MaterialDesignRaisedButton}" FontSize="20px" Grid.Column="1" Height="Auto" Margin="20" Content="Material" Click="Button_Click_3"/>
+                        <Button Style="{DynamicResource MaterialDesignRaisedButton}" FontSize="20px" Grid.Column="1" Height="Auto" Margin="20" Content="Equipamento" Click="Button_Click_3"/>
 
                     </Grid>
                     <Grid Grid.Row="2">

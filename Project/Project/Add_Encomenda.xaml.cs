@@ -103,8 +103,7 @@ namespace Project
                 ListaEncomendas.getLista().add_Encomenda(cliente, contacto, morada, tipo_madeira, quantidade, preco, _data);
 
                 MessageBox.Show("Encomenda criada. ");
-                this.NavigationService.Refresh();
-                initialize_components();
+                this.NavigationService.GoBack();
             }
             catch
             {
