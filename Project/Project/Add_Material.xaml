@@ -32,19 +32,19 @@
                     <StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Tipo:   "/>
-                            <TextBox Name="textbox_tipo" BorderBrush="#1B5E20" FontSize="24px" GotFocus="textbox_tipo_GotFocus"/>
+                            <TextBox Name="textbox_tipo" Width="500" BorderBrush="#1B5E20" FontSize="24px" GotFocus="textbox_tipo_GotFocus"/>
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Quantidade:   " />
-                            <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="400" AcceptsReturn="True" Name="textbox_quantidade" BorderBrush="#1B5E20" GotFocus="TextBox_quantidade_GotFocus" />
+                            <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="500" AcceptsReturn="True" Name="textbox_quantidade" BorderBrush="#1B5E20" GotFocus="TextBox_quantidade_GotFocus" />
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Unidade:   " />
-                            <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="400" AcceptsReturn="True" Name="textbox_unidade" BorderBrush="#1B5E20" GotFocus="TextBox_unidade_GotFocus" />
+                            <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="500" AcceptsReturn="True" Name="textbox_unidade" BorderBrush="#1B5E20" GotFocus="TextBox_unidade_GotFocus" />
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Descricao:   "/>
-                            <TextBox Name="textbox_descricao" BorderBrush="#1B5E20" FontSize="24px" GotFocus="textbox_descricao_GotFocus"/>
+                            <TextBox Name="textbox_descricao" BorderBrush="#1B5E20" FontSize="24px" Width="500" AcceptsReturn="True" GotFocus="textbox_descricao_GotFocus"/>
                         </StackPanel>
 
                         <Button Name="guardar" Content="Guardar" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 40" Click="Adicionar"/>

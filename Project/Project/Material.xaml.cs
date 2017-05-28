@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -46,23 +47,13 @@ namespace Project
             this.NavigationService.Navigate(new Add_Material());
         }
 
-        private void Apagar_material(object sender, RoutedEventArgs e)
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                this.NavigationService.Refresh();
-                String descricao = Convert.ToString(TypeDescriptor.GetProperties(this.materiaisListBox.SelectedItem)["descricao"].GetValue(this.materiaisListBox.SelectedItem));
+            System.Windows.Controls.Button delete = (System.Windows.Controls.Button)e.OriginalSource;
+            DialogResult dialogResult = form1.Show("Confirmar remoção", "Tem a certeza que pretende apagar?", "", "Sim", "Não");
+            if (dialogResult == DialogResult.No)
+                delete.Command = ApplicationCommands.NotACommand;
 
-                Material_class toRemove = ListaMateriais.getLista().Single(r => r.descricao == descricao); // && r.contacto == contacto && r.morada == morada && (r.inicio.CompareTo(inicio) == 0) && (r.fim.CompareTo(fim) == 0) && r.descricao == descricao);
-                ListaMateriais.getLista().Remove(toRemove);
-                MessageBox.Show("Material Removido. ");
-                this.NavigationService.Refresh();
-            }
-            catch
-            {
-                MessageBox.Show("Nenhuma encomenda selecionada. ");
-                this.NavigationService.Refresh();
-            }
         }
     }
     public class Material_class

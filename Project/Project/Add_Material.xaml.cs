@@ -56,8 +56,7 @@ namespace Project
                 ListaMateriais.getLista().add_Material(tipo, quantidade, unidade, descricao);
 
                 MessageBox.Show("Material adicionado. ");
-                this.NavigationService.Refresh();
-                initialize_components();
+                this.NavigationService.GoBack();
             }
             catch
             {
