@@ -126,9 +126,9 @@ namespace Project
         static ListaEncomendas lista = new ListaEncomendas();
         public ListaEncomendas()
         {
-            add_Encomenda("Maria Madeira Eu Quero", 93423221, "nº102, Rua das Plantas", "Eucalipto", "20 m2", "100.57", Convert.ToDateTime("2017-05-10"));
-            add_Encomenda("Carlos Josefiino Andrade", 1234212, "nº10, Rua dos Arrozes Perfeito", "Sobreiro", "40 m2", "180.50", Convert.ToDateTime("2017-05-12"));
-            add_Encomenda("Marta Carvalho", 9123121, "nº 20, Rua dos Carvalhos Perdidos", "Carvalhos", "10 m2", "50.05", Convert.ToDateTime("2017-10-11"));
+            add_Encomenda("Maria Madeira Eu Quero", 93423221, "nº102, Rua das Plantas", "Eucalipto", "20", "100.57 ", Convert.ToDateTime("2017-05-10"));
+            add_Encomenda("Carlos Josefiino Andrade", 1234212, "nº10, Rua dos Arrozes Perfeito", "Sobreiro", "40", "180.50", Convert.ToDateTime("2017-05-12"));
+            add_Encomenda("Marta Carvalho", 9123121, "nº 20, Rua dos Carvalhos Perdidos", "Carvalhos", "10", "50.05", Convert.ToDateTime("2017-10-11"));
             lista = this;
 
         }
@@ -138,7 +138,7 @@ namespace Project
         }
         public void add_Encomenda(string cliente, int contacto, string morada, string tipo_madeira, string quantidade, string preco, DateTime data)
         {
-            this.Add(new Encomenda { cliente = cliente, contacto = contacto, morada = morada, tipo_madeira = tipo_madeira, quantidade = quantidade, preco = String.Concat(preco, "€"), data = data });
+            this.Add(new Encomenda { cliente = cliente, contacto = contacto, morada = morada, tipo_madeira = tipo_madeira, quantidade = String.Concat(quantidade, " m2"), preco = String.Concat(preco, " €"), data = data });
 
         }
     }

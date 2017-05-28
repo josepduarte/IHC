@@ -44,12 +44,20 @@ namespace Project
       
                 double temp = Convert.ToDouble(textbox_quantidade.Text);
 
-                ListaMadeiras.getLista().add_Madeira(tipo, quantidade);
-                Stock.to_save.add_Madeira(tipo, quantidade);
+                if(ListaMadeiras.getLista().ToList().Find(x => x.tipo.Equals(tipo, StringComparison.InvariantCultureIgnoreCase)) == null)
+                {
+                    ListaMadeiras.getLista().add_Madeira(tipo, quantidade);
+                    Stock.to_save.add_Madeira(tipo, quantidade);
 
-                MessageBox.Show("Tipo de mandeira e quantidade adicionados. ");
-                this.NavigationService.GoBack();
-                initialize_components();
+                    MessageBox.Show("Tipo de madeira e quantidade adicionados. ");
+                    this.NavigationService.GoBack();
+                }
+                else
+                {
+                    MessageBox.Show("Tipo de madeira já foi adicionado antes. Atualize a quantidade como pretendido. ");
+                    this.NavigationService.GoBack();
+                }
+         
             }
             catch
             {

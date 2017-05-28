@@ -31,8 +31,6 @@ namespace Project
             textbox_tipo.Foreground = Brushes.AntiqueWhite;
             textbox_quantidade.Text = " Insira a quantidade aqui. ";
             textbox_quantidade.Foreground = Brushes.AntiqueWhite;
-            textbox_unidade.Text = "Insira a unidade aqui. ";
-            textbox_unidade.Foreground = Brushes.AntiqueWhite;
             textbox_descricao.Text = "Insira a descricao aqui. ";
             textbox_descricao.Foreground = Brushes.AntiqueWhite;
         }
@@ -76,8 +74,7 @@ namespace Project
         }
         private void TextBox_unidade_GotFocus(object sender, RoutedEventArgs e)
         {
-            textbox_unidade.Text = "";
-            textbox_unidade.Foreground = Brushes.AntiqueWhite;
+            
         }
         private void textbox_descricao_GotFocus(object sender, RoutedEventArgs e)
         {

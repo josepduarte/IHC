@@ -45,11 +45,11 @@
                     <StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Tipo de madeira:   "/>
-                            <TextBox Name="textbox_tipo" BorderBrush="#1B5E20" FontSize="24px" GotFocus="textbox_tipo_GotFocus"/>
+                            <TextBox Name="textbox_tipo" BorderBrush="#1B5E20" FontSize="24px" GotFocus="textbox_tipo_GotFocus" Width="500"/>
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Quantidade:   "/>
-                            <TextBox Name="textbox_quantidade" BorderBrush="#1B5E20" FontSize="24px" GotFocus="textbox_quantidade_GotFocus"/>
+                            <TextBox Name="textbox_quantidade" BorderBrush="#1B5E20" FontSize="24px" GotFocus="textbox_quantidade_GotFocus" Width="500"/>
                         </StackPanel>
                         
 
