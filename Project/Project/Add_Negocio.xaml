@@ -6,6 +6,18 @@
       xmlns:sys="clr-namespace:System;assembly=mscorlib"
       xmlns:local="clr-namespace:Project"
       mc:Ignorable="d" 
+      
+      
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+      
+      
       d:DesignHeight="300" d:DesignWidth="300"
       Title="Add_Negocio">
 
@@ -33,15 +45,15 @@
                     <StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Nome:   "/>
-                            <TextBox Name="textbox_nome" BorderBrush="#1B5E20" FontSize="24px" GotFocus="TextBoxNome_GotFocus"/>
+                            <TextBox Name="textbox_nome" BorderBrush="#1B5E20" FontSize="24px" GotFocus="TextBoxNome_GotFocus" Width="500"/>
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Contacto:   "/>
-                            <TextBox Name="textbox_contacto" BorderBrush="#1B5E20" FontSize="24px" GotFocus="TextBoxContacto_GotFocus"/>
+                            <TextBox Name="textbox_contacto" BorderBrush="#1B5E20" FontSize="24px" GotFocus="TextBoxContacto_GotFocus" Width="500"/>
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Morada:   "/>
-                            <TextBox Name="textbox_morada" BorderBrush="#1B5E20" FontSize="24px" GotFocus="TextBoxMorada_GotFocus"/>
+                            <TextBox Name="textbox_morada" TextWrapping="Wrap" BorderBrush="#1B5E20" FontSize="24px" GotFocus="TextBoxMorada_GotFocus" Width="500"/>
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Início:   "/>
@@ -49,11 +61,11 @@
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Fim:   "/>
-                            <DatePicker Name="fim" BorderBrush="#1B5E20" FontSize="24px" SelectedDate="{x:Static sys:DateTime.Now}" Foreground="AntiqueWhite"/>
+                            <DatePicker Name="fim" BorderBrush="#1B5E20" FontSize="24px" SelectedDate="{x:Static sys:DateTime.Now}" Foreground="AntiqueWhite" />
                         </StackPanel>
                         <StackPanel Margin="0 10" Orientation="Horizontal">
                             <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Descrição:   " />
-                            <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="400" AcceptsReturn="True" Name="textbox_descricao" BorderBrush="#1B5E20" GotFocus="TextBoxDescricao_GotFocus" />
+                            <TextBox  VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="500" AcceptsReturn="True" Name="textbox_descricao" BorderBrush="#1B5E20" GotFocus="TextBoxDescricao_GotFocus" />
                         </StackPanel>
                         <Button Name="guardar" Content="Guardar" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 40" Click="Adicionar"/>
                     </StackPanel>
