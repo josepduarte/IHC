@@ -8,12 +8,14 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
+using System.Windows.Controls;
 
 namespace Project
 {
@@ -77,6 +79,15 @@ namespace Project
                 e.Column.Visibility = Visibility.Collapsed;
             else
                 e.Column.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Controls.Button delete = (System.Windows.Controls.Button)e.OriginalSource;
+            DialogResult dialogResult = form1.Show("Confirmar remoção", "Tem a certeza que pretende apagar?", "", "Sim", "Não");
+            if (dialogResult == DialogResult.No)
+                delete.Command = ApplicationCommands.NotACommand;
+
         }
     }
     public class Negocio

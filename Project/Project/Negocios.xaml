@@ -53,7 +53,7 @@
                 </Grid.RowDefinitions>
 
                 <materialDesign:Card Margin="20">
-                    <DataGrid   ItemsSource="{Binding Source={StaticResource Negocios}}" AutoGenerateColumns="True"  ColumnWidth="*" AutoGeneratingColumn="DataGrid_AutoGeneratingColumn"  >
+                    <DataGrid  ItemsSource="{Binding Source={StaticResource Negocios}}" AutoGenerateColumns="True"  ColumnWidth="*" AutoGeneratingColumn="DataGrid_AutoGeneratingColumn"  >
                         <DataGrid.Columns>
                             <DataGridTemplateColumn Header="Precipitação" IsReadOnly="False" DisplayIndex="7" >
                                 <DataGridTemplateColumn.CellTemplate>
@@ -65,7 +65,7 @@
                             <DataGridTemplateColumn Header="" IsReadOnly="True" Width="100" DisplayIndex="8">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Background="LightSalmon" BorderBrush="LightSalmon" Content="Apagar" Command="Delete"/>
+                                        <Button Background="LightSalmon" BorderBrush="LightSalmon" Content="Apagar" Command="Delete" Click="Button_Click_2" />
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
