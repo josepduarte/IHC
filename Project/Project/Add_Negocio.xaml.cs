@@ -64,6 +64,8 @@ namespace Project
         {
             try
             {
+                
+
                 String cliente = textbox_nome.Text;
                 int contacto = (Convert.ToInt32(textbox_contacto.Text));
                 String morada = textbox_morada.Text;
@@ -71,10 +73,27 @@ namespace Project
                 DateTime _fim = Convert.ToDateTime(fim.Text);
                 String descricao = textbox_descricao.Text;
 
-                ListaNegocios.getLista().add_Negocio(cliente, contacto, morada, _inicio, _fim, descricao);
+                bool can_create =true;
+                foreach (DateTime date in Dates.dates)
+                {
+                    if(DateTime.Compare(date, _inicio) > 0 && DateTime.Compare(date, _fim) < 0)
+                    {
+                        can_create = false;
+                        break;
+                    }
+               
+                }
+                if (can_create)
+                {
+                    ListaNegocios.getLista().add_Negocio(cliente, contacto, morada, _inicio, _fim, descricao);
 
-                MessageBox.Show("Negócio criado. ");
-                this.NavigationService.GoBack();
+                    MessageBox.Show("Negócio criado. ");
+                    this.NavigationService.GoBack();
+                }
+                else
+                {
+                    MessageBox.Show("Não pode criar este negócio. Datas sobrepostas com outro negócio. ");
+                }                
                 
             }
             catch

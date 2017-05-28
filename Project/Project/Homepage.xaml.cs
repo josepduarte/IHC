@@ -24,6 +24,12 @@ namespace Project
         public Homepage()
         {
             InitializeComponent();
+            ListaNegocios bla = new ListaNegocios();
+            foreach (DateTime date in Dates.dates)
+            {
+                Console.WriteLine(date);
+                CalendarNegocios.BlackoutDates.Add(new CalendarDateRange(date, date)); 
+            }
         }
 
         /* Botão "Propriedades" */
@@ -105,6 +111,11 @@ namespace Project
         {
             Administracao PaginaAdmin = new Administracao();
             this.NavigationService.Navigate(PaginaAdmin);
+        }
+
+        private void CalendarNegocios_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Console.WriteLine("Selected date");
         }
     }
 }

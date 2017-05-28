@@ -17,6 +17,8 @@ using System.Windows.Shapes;
 using System.Xml;
 using System.Windows.Controls;
 
+
+
 namespace Project
 {
     /// <summary>
@@ -51,7 +53,8 @@ namespace Project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
         }
 
         private void Adcionar_Negocio(object sender, RoutedEventArgs e)
@@ -154,7 +157,7 @@ namespace Project
         private Random rnd = new Random();
         public ListaNegocios()
         {
-            add_Negocio("Matilde Guimarães", 234824022, "Rua dos cordelinhos", Convert.ToDateTime("2017-05-18"), Convert.ToDateTime("2017-05-18"), "2000 m2 de eucaliptos");
+            add_Negocio("Matilde Guimarães", 234824022, "Rua dos cordelinhos", Convert.ToDateTime("2017-05-18"), Convert.ToDateTime("2017-05-19"), "2000 m2 de eucaliptos");
             add_Negocio("Carla Antónia", 234124012, "Rua das Azeitonas, nº23", Convert.ToDateTime("2017-06-12"), Convert.ToDateTime("2017-08-12"), "6000 m2 de pinheiros");
             add_Negocio("Joaquim Manel", 232412312, "Rua dos Sobreiros", Convert.ToDateTime("2017-9-12"), Convert.ToDateTime("2017-9-12"), "2000 m2 de sobreiros");
             add_Negocio("Artur Carapau", 32423422, "Rua dos Pescados", Convert.ToDateTime("2017-9-18"), Convert.ToDateTime("2017-9-18"), "200 m2 de eucaliptos");
@@ -171,10 +174,29 @@ namespace Project
         //private static readonly Random rnd = new Random();
         public void add_Negocio(string cliente, int contacto, string morada, DateTime inicio, DateTime fim, string descricao)
         {
+            if (DateTime.Compare(inicio, fim) > 0)
+                throw new Exception();
+
             //Random rnd = new Random();
             string precipitacao = String.Concat(Convert.ToString(this.rnd.Next(1, 10) * 10), "%");
 
             this.Add(new Negocio { cliente = cliente, contacto = contacto, morada = morada, inicio = inicio, fim = fim, descricao = descricao, precipitacao = precipitacao });
+            
+            Dates.dates.Add(inicio);
+            DateTime tempdate = inicio;
+            Console.WriteLine(tempdate);
+            
+            while (DateTime.Compare(tempdate,fim) != 0)
+            {
+                tempdate = tempdate.AddDays(1);
+                Dates.dates.Add(tempdate);
+
+                //Console.WriteLine(tempdate);
+            }
+            
+     
+           
+
             /*
             String url = "api.openweathermap.org/data/2.5/forecast/daily?id=524901&APPID=90933764d690fab7366a6029e0c411a6";
             XmlReader reader = XmlReader.Create(url);
@@ -189,6 +211,13 @@ namespace Project
             //  Negocios.selectDate(temp_inicio);
         }
     }
+    public class Dates
+    {
+        public static List<DateTime> dates = new List<DateTime>();
+
+    }
+    
+
 
 
 }
