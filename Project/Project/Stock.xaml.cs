@@ -37,7 +37,7 @@ namespace Project
             }
 
         }
-        ListaMadeiras to_save;
+        public static ListaMadeiras to_save;
 
         /* Botão "Voltar à Página Inicial" */
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -105,28 +105,32 @@ namespace Project
 
         private void restaurar_valor(object sender, RoutedEventArgs e)
         {
+           
             stockListBox.ItemsSource = null;
             foreach (Madeira element in ListaMadeiras.getLista())
             {
-                if((to_save.ToList().Find(x => x.tipo == element.tipo)) != null){
+                if ((to_save.ToList().Find(x => x.tipo == element.tipo)) != null)
+                {
                     element.quantidade = to_save.ToList().Find(x => x.tipo == element.tipo).quantidade;
                 }
             }
             stockListBox.ItemsSource = ListaMadeiras.getLista();
-
-            this.NavigationService.Refresh();
-            
         }
 
         private void guardar(object sender, RoutedEventArgs e)
         {
-            foreach (Madeira element in to_save)
+            DialogResult dialogResult = form1.Show("Confirmar atualização", "Pretende guardar estes valores?", "", "Sim", "Não");
+            if (dialogResult == DialogResult.Yes)
             {
-                if ((ListaMadeiras.getLista().ToList().Find(x => x.tipo == element.tipo)) != null)
+                foreach (Madeira element in to_save)
                 {
-                    element.quantidade = ListaMadeiras.getLista().ToList().Find(x => x.tipo == element.tipo).quantidade;
+                    if ((ListaMadeiras.getLista().ToList().Find(x => x.tipo == element.tipo)) != null)
+                    {
+                        element.quantidade = ListaMadeiras.getLista().ToList().Find(x => x.tipo == element.tipo).quantidade;
+                    }
                 }
             }
+
         }
     }
     public class Madeira

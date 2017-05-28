@@ -40,14 +40,15 @@ namespace Project
             try
             {
                 String tipo = textbox_tipo.Text;
-                String quantidade = (String.Concat(textbox_quantidade.Text, " m2"));
+                String quantidade = textbox_quantidade.Text;
       
                 double temp = Convert.ToDouble(textbox_quantidade.Text);
 
                 ListaMadeiras.getLista().add_Madeira(tipo, quantidade);
+                Stock.to_save.add_Madeira(tipo, quantidade);
 
                 MessageBox.Show("Tipo de mandeira e quantidade adicionados. ");
-                this.NavigationService.Refresh();
+                this.NavigationService.GoBack();
                 initialize_components();
             }
             catch
