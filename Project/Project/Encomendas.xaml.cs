@@ -63,6 +63,14 @@ namespace Project
            Add_Encomenda PaginaAddEncomenda = new Add_Encomenda();
            this.NavigationService.Navigate(PaginaAddEncomenda);
         }
+
+        private void Button_anterior(object sender, RoutedEventArgs e)
+        {
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+        }
     }
     public class Encomenda
     {

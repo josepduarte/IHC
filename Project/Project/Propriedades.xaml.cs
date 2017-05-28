@@ -38,5 +38,13 @@ namespace Project
             NavigationService ns = NavigationService.GetNavigationService(this);
             ns.Navigate(new Uri("Add_Propriedade.xaml", UriKind.Relative));
         }
+
+        private void Button_anterior(object sender, RoutedEventArgs e)
+        {
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+        }
     }
 }

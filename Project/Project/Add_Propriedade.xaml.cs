@@ -106,6 +106,14 @@ namespace Project
                 propPage.myMap.Children.Add(pin);
             }
         }
+
+        private void Button_anterior(object sender, RoutedEventArgs e)
+        {
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+        }
     }
 
     public static class GlobalVars

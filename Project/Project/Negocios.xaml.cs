@@ -89,6 +89,14 @@ namespace Project
                 delete.Command = ApplicationCommands.NotACommand;
 
         }
+
+        private void Button_anterior(object sender, RoutedEventArgs e)
+        {
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+        }
     }
     public class Negocio
     {

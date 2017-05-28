@@ -5,6 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Project"
       mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+      
       d:DesignHeight="300" d:DesignWidth="300"
       Title="Add_stock">
 
@@ -16,16 +25,20 @@
             </Grid.RowDefinitions>
             <Grid Background="#1B5E20">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*"/>
                     <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Label VerticalAlignment="Center" Grid.Column="0" Foreground="White" FontSize="16px" Margin="10" FontWeight="DemiBold">
                     Gestão de Atividade Madeireira - Adicionar Tipo de Madeira
                 </Label>
-                <Button  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Margin="10" Click="Button_Click_1">
-                    Voltar à Página Inicial
-                </Button>
-
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 20 0">
+                    <Button  HorizontalAlignment="Right" Background="CornflowerBlue" BorderBrush="CornflowerBlue" VerticalAlignment="Center" Grid.Column="1" Margin="10" Click="Button_anterior" >
+                        Voltar à Página Anterior
+                    </Button>
+                    <Button  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2" Margin="10" Click="Button_Click_1" >
+                        Voltar à Página Inicial
+                    </Button>
+                </StackPanel>
             </Grid>
             <Grid Grid.Row="1" Background="#FF2E7D32">
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 100">
