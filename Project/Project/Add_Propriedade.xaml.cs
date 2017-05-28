@@ -30,7 +30,21 @@ namespace Project
         public Add_Propriedade()
         {
             InitializeComponent();
+            initialize_components();
             DataContext = this;
+        }
+        public void initialize_components()
+        {
+            textBox.Text = " Insira a rua aqui. ";
+            textBox.Foreground = Brushes.AntiqueWhite;
+            textBox1.Text = " Insira a freguesia aqui. ";
+            textBox1.Foreground = Brushes.AntiqueWhite;
+            textBox2.Text = "Insira o concelho aqui. ";
+            textBox2.Foreground = Brushes.AntiqueWhite;
+            textBox3.Text = "Insira a latitude aqui. (coordenadas)";
+            textBox3.Foreground = Brushes.AntiqueWhite;
+            textBox4.Text = "Insira a longitude aqui. (coordenadas)";
+            textBox4.Foreground = Brushes.AntiqueWhite;
         }
 
         /* Botão "Voltar à Página Inicial" */
@@ -113,6 +127,36 @@ namespace Project
             {
                 this.NavigationService.GoBack();
             }
+        }
+
+        private void textbox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textBox.Text = "";
+            textBox.Foreground = Brushes.AntiqueWhite;
+        }
+
+        private void TextBox1_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textBox1.Text = "";
+            textBox1.Foreground = Brushes.AntiqueWhite;
+        }
+
+        private void TextBox2_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textBox2.Text = "";
+            textBox2.Foreground = Brushes.AntiqueWhite;
+        }
+
+        private void TextBox3_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textBox3.Text = "";
+            textBox3.Foreground = Brushes.AntiqueWhite;
+        }
+
+        private void TextBox4_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textBox4.Text = "";
+            textBox4.Foreground = Brushes.AntiqueWhite;
         }
     }
 

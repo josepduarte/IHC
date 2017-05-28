@@ -41,47 +41,35 @@
                     </Button>
                 </StackPanel>
             </Grid>
+            <Grid Grid.Row="1" Background="#FF2E7D32">
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 100">
+                    <StackPanel>
+                        <StackPanel Margin="0 10" Orientation="Horizontal">
+                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Rua:   "/>
+                            <TextBox Name="textBox" Width="500" BorderBrush="#1B5E20" FontSize="24px" GotFocus="textbox_GotFocus"/>
+                        </StackPanel>
+                        <StackPanel Margin="0 10" Orientation="Horizontal">
+                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Freguesia:   " />
+                            <TextBox Name="textBox1" VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="500" AcceptsReturn="True" BorderBrush="#1B5E20" GotFocus="TextBox1_GotFocus" />
+                        </StackPanel>
+                        <StackPanel Margin="0 10" Orientation="Horizontal">
+                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Concelho:   " />
+                            <TextBox Name="textBox2" VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="500" AcceptsReturn="True" BorderBrush="#1B5E20" GotFocus="TextBox2_GotFocus" />
+                        </StackPanel>
+                        <StackPanel Margin="0 10" Orientation="Horizontal">
+                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Latitude:   " />
+                            <TextBox Name="textBox3" VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="500" AcceptsReturn="True" BorderBrush="#1B5E20" GotFocus="TextBox3_GotFocus" />
+                        </StackPanel>
+                        <StackPanel Margin="0 10" Orientation="Horizontal">
+                            <Label Foreground="White" FontWeight="Bold" FontSize="24px" Content="Longitude:   " />
+                            <TextBox Name="textBox4" VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24px" Width="500" AcceptsReturn="True" BorderBrush="#1B5E20" GotFocus="TextBox4_GotFocus" />
+                        </StackPanel>
 
-            <Grid Grid.Row="1" >
-                <Label x:Name="label3" Content="Introduza os dados da nova Propriedade:" 
-                   HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Margin="309,78,0,0"/>
-
-                <Label x:Name="label" Content="Rua:" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                   Margin="309,184,0,0" FontSize="25"/>
-                <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" 
-                     Text="{Binding rua}" VerticalAlignment="Top" Width="558" Margin="490,197,0,0"
-                     BorderBrush="Gray" BorderThickness="1"/>
-
-                <Label x:Name="label1" Content="Freguesia:" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                   Margin="309,288,0,0" FontSize="25"/>
-                <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" 
-                     Text="{Binding freguesia}" VerticalAlignment="Top" Width="558" Margin="490,301,0,0"
-                     BorderBrush="Gray" BorderThickness="1"/>
-
-                <Label x:Name="label2" Content="Concelho:" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                   Margin="309,390,0,0" FontSize="25"/>
-                <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" 
-                     Text="{Binding concelho}" VerticalAlignment="Top" Width="558" Margin="490,403,0,0"
-                     BorderBrush="Gray" BorderThickness="1"/>
-
-                <Label x:Name="label4" Content="Coordenada-Latitude:" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                       Margin="309,488,0,0" FontSize="25"/>
-                <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" 
-                         Text="{Binding coordX}" VerticalAlignment="Top" Width="432" Margin="616,501,0,0"
-                         BorderBrush="Gray" BorderThickness="1"/>
-
-                <Label x:Name="label5" Content="Coordenada-Longitude:" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                       Margin="309,523,0,0" FontSize="25"/>
-                <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" 
-                         Text="{Binding coordY}" VerticalAlignment="Top" Width="432" Margin="616,536,0,0"
-                         BorderBrush="Gray" BorderThickness="1"/>
-
-                <Button x:Name="button" Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" 
-                    Width="127" Margin="921,618,0,0" Height="40" FontSize="20" Click="button_Click_1" />
-
-                <Button x:Name="button1" Content="Cancelar" HorizontalAlignment="Left" VerticalAlignment="Top"
-                    Width="127" Margin="754,618,0,0" Height="40" FontSize="20" Background="Red" Click="button_Click_2" />
+                        <Button Name="guardar" Content="Guardar" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 40" Click="button_Click_1"/>
+                    </StackPanel>
+                </Grid>
             </Grid>
+            
         </Grid>
     </Border>
 </Page>
