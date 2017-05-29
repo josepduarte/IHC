@@ -71,6 +71,25 @@ namespace Project
                 this.NavigationService.GoBack();
             }
         }
+
+
+        private void DataGrid_AutoGeneratingColumn_1(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            if (e.Column.Header.ToString() == "cliente")
+                e.Column.Header = "Cliente";
+            if (e.Column.Header.ToString() == "contacto")
+                e.Column.Header = "Contacto";
+            if (e.Column.Header.ToString() == "morada")
+                e.Column.Header = "Morada";
+            if (e.Column.Header.ToString() == "tipo_madeira")
+                e.Column.Header = "Tipo de Madeira";
+            if (e.Column.Header.ToString() == "data")
+                e.Column.Header = "Data";
+            if (e.Column.Header.ToString() == "quantidade")
+                e.Column.Header = "Quantidade";
+            if (e.Column.Header.ToString() == "preco")
+                e.Column.Header = "Preço";
+        }
     }
     public class Encomenda
     {

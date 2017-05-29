@@ -26,10 +26,7 @@ namespace Project
             InitializeComponent();
             ListaNegocios bla = new ListaNegocios();
             foreach (DateTime date in Dates.dates)
-            {
-                Console.WriteLine(date);
                 CalendarNegocios.BlackoutDates.Add(new CalendarDateRange(date, date)); 
-            }
         }
 
         /* Botão "Propriedades" */

@@ -76,7 +76,7 @@
                 </Grid>
                 <!-- Second Colummn -->
                 <StackPanel Grid.Column="1" Margin="40" VerticalAlignment="Center">
-                    <Label Margin="0 40 0 0" Content="Negócios agendados" FontSize="20" Foreground="White" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                    <Label Margin="0 40 0 0" Content="Agendar Negócios" FontSize="20" Foreground="White" FontWeight="DemiBold" HorizontalAlignment="Center"/>
                     <Calendar  Name="CalendarNegocios" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 40 0 0" SelectedDatesChanged="CalendarNegocios_SelectedDatesChanged"/>
                 </StackPanel>
             </Grid>

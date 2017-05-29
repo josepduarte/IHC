@@ -63,6 +63,18 @@ namespace Project
                 this.NavigationService.GoBack();
             }
         }
+
+        private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            if (e.Column.Header.ToString() == "tipo")
+                e.Column.Header = "Tipo de material";
+            if (e.Column.Header.ToString() == "quantidade")
+                e.Column.Header = "Quantidade";
+            if (e.Column.Header.ToString() == "unidade")
+                e.Column.Header = "Unidade";
+            if (e.Column.Header.ToString() == "descricao")
+                e.Column.Header = "Descrição";
+        }
     }
     public class Material_class
     {

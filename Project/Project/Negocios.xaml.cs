@@ -16,8 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using System.Windows.Controls;
-
-
+using System.ComponentModel;
 
 namespace Project
 {
@@ -31,20 +30,6 @@ namespace Project
         {
             InitializeComponent();
             negocios = this;
-            //CalendarNegocios.SelectedDates.Add(Convert.ToDateTime("2017-05-18"));
-           // CalendarNegocios.SelectedDates.Add(Convert.ToDateTime("2017-05-06"));
-        }
-        public static void selectDate(DateTime date)
-        {
-            Console.WriteLine("Blaaaaa: ");
-            Console.WriteLine(negocios);
-            try {
-           //     negocios.CalendarNegocios.SelectedDates.Add(date);
-            }
-            catch
-            {
-                Console.WriteLine("rebentou");
-            }
         }
         public static Negocios get_negocios()
         {
@@ -78,6 +63,19 @@ namespace Project
 
         private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
         {
+            if (e.Column.Header.ToString() == "cliente")
+                e.Column.Header = "Cliente";
+            if (e.Column.Header.ToString() == "contacto")
+                e.Column.Header = "Contacto";
+            if (e.Column.Header.ToString() == "morada")
+                e.Column.Header = "Morada";
+            if (e.Column.Header.ToString() == "inicio")
+                e.Column.Header = "Início";
+            if (e.Column.Header.ToString() == "fim")
+                e.Column.Header = "Fim";
+            if (e.Column.Header.ToString() == "descricao")
+                e.Column.Header = "Descrição";
+
             if (Convert.ToString(e.Column.Header) == "precipitacao")
                 e.Column.Visibility = Visibility.Collapsed;
             else
@@ -103,6 +101,7 @@ namespace Project
     }
     public class Negocio
     {
+        
         private string _cliente;
         private int _contacto;
         private string _morada;
@@ -110,9 +109,9 @@ namespace Project
         private DateTime _fim;
         private string _descricao;
         private string _precipitacao;
-        
 
 
+        [DisplayName("Casdasdase")]
         public string cliente
         {
             get { return _cliente; }
@@ -178,20 +177,18 @@ namespace Project
                 throw new Exception();
 
             //Random rnd = new Random();
-            string precipitacao = String.Concat(Convert.ToString(this.rnd.Next(1, 10) * 10), "%");
+            string precipitacao = String.Concat(Convert.ToString(this.rnd.Next(1, 6) * 10), "%");
 
             this.Add(new Negocio { cliente = cliente, contacto = contacto, morada = morada, inicio = inicio, fim = fim, descricao = descricao, precipitacao = precipitacao });
             
             Dates.dates.Add(inicio);
             DateTime tempdate = inicio;
-            Console.WriteLine(tempdate);
-            
+             
             while (DateTime.Compare(tempdate,fim) != 0)
             {
                 tempdate = tempdate.AddDays(1);
                 Dates.dates.Add(tempdate);
 
-                //Console.WriteLine(tempdate);
             }
             
      
