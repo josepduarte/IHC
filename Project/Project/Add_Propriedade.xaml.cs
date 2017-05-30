@@ -54,71 +54,31 @@ namespace Project
             NavigationService ns = NavigationService.GetNavigationService(this);
             ns.Navigate(new Uri("Homepage.xaml", UriKind.Relative));
 
-            for (int i = 0; i < GlobalVars.numItem; i++)
-            {
-                Button btn = new Button();
-                btn.Content = GlobalVars.items[i];
-                btn.Height = 100;
-                btn.HorizontalContentAlignment = HorizontalAlignment.Left;
-                propPage.buttonContainer.Children.Add(btn);
-            }
+            
         }
 
-        /* Botão "Ok" */
+        /* Botão "Guardar" */
         private void button_Click_1(object sender, RoutedEventArgs e)
         {
-            Propriedades propPage = new Propriedades();
-            this.NavigationService.Navigate(propPage);
-
-            var str = string.Format("PROPRIEDADE {0}:", GlobalVars.numItem);
-            GlobalVars.items[GlobalVars.numItem++] = str+"\n"+rua+", "+freguesia+", "+concelho;
-
-            for (int i = 0; i < GlobalVars.numItem; i++)
+            try
             {
-                Button btn = new Button();
-                btn.Content = GlobalVars.items[i];
-                btn.Height = 100;
-                btn.HorizontalContentAlignment = HorizontalAlignment.Left;
-                propPage.buttonContainer.Children.Add(btn);
+                String rua = textBox.Text;
+                String freguesia = textBox1.Text;
+                String concelho = textBox2.Text;
+                Double coord_x = Convert.ToDouble(textBox3.Text);
+                Double coord_y = Convert.ToDouble(textBox4.Text);
+
+                ListaPropriedades.getLista().add_Propriedade(rua, freguesia, concelho, coord_x, coord_y);
+
+                MessageBox.Show("Propriedade adicionado. ");
+
+                this.NavigationService.GoBack();
             }
-
-            Pins.cx[Pins.numPin] = coordX;
-            Pins.cy[Pins.numPin] = coordY;
-            Pins.numPin++;
-
-            for (int i = 0; i < Pins.numPin; i++)
+            catch
             {
-                var pushpinText = string.Format("P{0}", i);
-                Pushpin pin = new Pushpin();
-                pin.Content = pushpinText;
-                pin.Location = new Location(Pins.cx[i], Pins.cy[i]);
-                propPage.myMap.Children.Add(pin);
-            }
-        }
-
-        /* botão "Cancelar"*/
-        private void button_Click_2(object sender, RoutedEventArgs e)
-        {
-            Propriedades propPage = new Propriedades();
-            this.NavigationService.Navigate(propPage);
-
-            for (int i = 0; i < GlobalVars.numItem; i++)
-            {
-                Button btn = new Button();
-                btn.Content = GlobalVars.items[i];
-                btn.Height = 100;
-                btn.HorizontalContentAlignment = HorizontalAlignment.Left;
-                propPage.buttonContainer.Children.Add(btn);
-            }
-
-            for (int i = 0; i < Pins.numPin; i++)
-            {
-                var pushpinText = string.Format("P{0}", i);
-                Pushpin pin = new Pushpin();
-                pin.Content = pushpinText;
-                pin.Location = new Location(Pins.cx[i], Pins.cy[i]);
-                propPage.myMap.Children.Add(pin);
-            }
+                MessageBox.Show("Erro na introdução dos dados. ");
+            }   
+            
         }
 
         private void Button_anterior(object sender, RoutedEventArgs e)
@@ -160,17 +120,5 @@ namespace Project
         }
     }
 
-    public static class GlobalVars
-    {
-        public static int numItem = 0;
-        public static string[] items = new string[100];
-    }
-
-    public static class Pins
-    {
-        public static int numPin = 0;
-        public static double[] cx = new double[100];
-        public static double[] cy = new double[100];
-    }
 
 }

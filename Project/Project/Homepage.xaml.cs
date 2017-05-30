@@ -35,23 +35,7 @@ namespace Project
             Propriedades PaginaPropriedades = new Propriedades();
             this.NavigationService.Navigate(PaginaPropriedades);
 
-            for (int i = 0; i < GlobalVars.numItem; i++)
-            {
-                Button btn = new Button();
-                btn.Content = GlobalVars.items[i];
-                btn.Height = 100;
-                btn.HorizontalContentAlignment = HorizontalAlignment.Left;
-                PaginaPropriedades.buttonContainer.Children.Add(btn);
-            }
-
-            for (int i = 0; i < Pins.numPin; i++)
-            {
-                var pushpinText = string.Format("P{0}", i);
-                Pushpin pin = new Pushpin();
-                pin.Content = pushpinText;
-                pin.Location = new Location(Pins.cx[i], Pins.cy[i]);
-                PaginaPropriedades.myMap.Children.Add(pin);
-            }
+            
         }
 
         /* Botão "Negócios" */

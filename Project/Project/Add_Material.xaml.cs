@@ -61,7 +61,6 @@ namespace Project
                 MessageBox.Show("Erro na introdução dos dados. ");
             }
         }
-
         private void textbox_tipo_GotFocus(object sender, RoutedEventArgs e)
         {
             textbox_tipo.Text = "";

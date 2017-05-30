@@ -60,4 +60,3 @@ C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Update_stock.bam
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\bin\Debug\MessageBoxManager.dll
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\bin\Debug\MessageBoxManager.pdb
 C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Project.form1.resources
-C:\Users\jduarte\Documents\GitHub\IHC\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
