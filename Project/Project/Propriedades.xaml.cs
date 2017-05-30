@@ -10,6 +10,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -19,19 +20,19 @@ using System.Windows.Shapes;
 namespace Project
 {
     /// <summary>
-    /// Interaction logic for Propriedades.xaml
-    /// </summary>
+    /// </summary>    /// Interaction logic for Propriedades.xaml
+
+    /// 
+
+    
     public partial class Propriedades : Page
     {
         public Propriedades()
         {
             InitializeComponent();
-            foreach (Propriedade prop in ListaPropriedades.getLista())
+            foreach (Pushpin pin in ListaPropriedades.pushpins_getList())
             {
                 // pushpin
-                Pushpin pin = new Pushpin();
-                pin.Content = prop.index;
-                pin.Location = new Location(prop.cord_x, prop.cord_y);
                 this.myMap.Children.Add(pin);
 
                 // button
@@ -81,19 +82,26 @@ namespace Project
         {
             try
             {
-                this.NavigationService.Refresh();
-                Console.WriteLine(this.propriedadesListBox.SelectedItem);
-                String cord_x = Convert.ToString(TypeDescriptor.GetProperties(this.propriedadesListBox.SelectedItem)["cord_x"].GetValue(this.propriedadesListBox.SelectedItem));
-                Console.WriteLine(cord_x);
-                Propriedade toRemove = ListaPropriedades.getLista().Single(r => Convert.ToString(r.cord_x) == cord_x); // && r.contacto == contacto && r.morada == morada && (r.inicio.CompareTo(inicio) == 0) && (r.fim.CompareTo(fim) == 0) && r.descricao == descricao);
-                Console.WriteLine(toRemove);
-                ListaPropriedades.getLista().Remove(toRemove);
-                MessageBox.Show("Encomenda Apagada. ");
-                this.NavigationService.Refresh();
+                Console.WriteLine(this.propriedadesListBox.SelectedItem.ToString());
+                DialogResult dialogResult = form1.Show("Confirmar remoção", "Tem a certeza que pretende apagar?", "", "Sim", "Não");
+                if (dialogResult == DialogResult.Yes)
+                {
+                    this.NavigationService.Refresh();
+                    Console.WriteLine(this.propriedadesListBox.SelectedItem);
+                    String cord_x = Convert.ToString(TypeDescriptor.GetProperties(this.propriedadesListBox.SelectedItem)["cord_x"].GetValue(this.propriedadesListBox.SelectedItem));
+                    Console.WriteLine(cord_x);
+                    Propriedade toRemove = ListaPropriedades.getLista().Single(r => Convert.ToString(r.cord_x) == cord_x); // && r.contacto == contacto && r.morada == morada && (r.inicio.CompareTo(inicio) == 0) && (r.fim.CompareTo(fim) == 0) && r.descricao == descricao);
+                    Pushpin pinToRemove = ListaPropriedades.pushpins_getList().Single(r => Convert.ToString(r.Location.Latitude) == cord_x);
+                    this.myMap.Children.Remove(pinToRemove);
+
+                    ListaPropriedades.getLista().Remove(toRemove);
+                    System.Windows.MessageBox.Show("Encomenda Apagada. ");
+                    this.NavigationService.Refresh();
+                }
             }
             catch
             {
-                MessageBox.Show("Nenhuma encomenda selecionada. ");
+                System.Windows.MessageBox.Show("Nenhuma encomenda selecionada. ");
                 this.NavigationService.Refresh();
             }
         }
@@ -145,10 +153,12 @@ namespace Project
     {
         static int count = 0;
         static ListaPropriedades lista = new ListaPropriedades();
+        static List<Pushpin> pushpins = new List<Pushpin>();
+        List<Pushpin> pushpins2 = new List<Pushpin>();
         public ListaPropriedades()
         {
             add_Propriedade("Outeiro", "Préstimo", "Águeda", 40.56206879475859, - 8.447628021240234);
-            
+            pushpins = pushpins2;
             lista = this;
 
         }
@@ -156,9 +166,21 @@ namespace Project
         {
             return lista;
         }
+        public static List<Pushpin> pushpins_getList()
+        {
+            return pushpins;
+        }
         public void add_Propriedade(string rua, string freguesia, string concelho, double cord_x, double cord_y)
         {           
             this.Add(new Propriedade { index=count, rua=rua, freguesia=freguesia, concelho=concelho, cord_x=cord_x, cord_y=cord_y });
+
+            Pushpin pin = new Pushpin();
+            pin.Content = count;
+            pin.Location = new Location(cord_x, cord_y);
+
+            this.pushpins2.Add(pin);
+            
+
             count++;
         }
     }

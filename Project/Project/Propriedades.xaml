@@ -63,9 +63,22 @@
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Margin="5" HorizontalAlignment="Stretch" Background="#FF2E7D32" Width="500">
-                                <Label FontSize="16px" Foreground="AntiqueWhite"  Content="{Binding Path=rua}"></Label>
-                                <Label FontSize="16px" Foreground="AntiqueWhite"  Content="{Binding Path=freguesia}"></Label>
-                                <Label FontSize="16px" Foreground="AntiqueWhite"  Content="{Binding Path=concelho}"></Label>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label FontSize="16px" Foreground="AntiqueWhite"  Content="Propriedade"></Label>
+                                    <Label FontSize="16px" Foreground="AntiqueWhite"  Content="{Binding Path=index}"></Label>
+                                 </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label FontSize="16px" Foreground="AntiqueWhite"  Content="Rua: "></Label>
+                                    <Label FontSize="16px" Foreground="AntiqueWhite"  Content="{Binding Path=rua}"></Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label FontSize="16px" Foreground="AntiqueWhite"  Content="Freguesia: "></Label>
+                                    <Label FontSize="16px" Foreground="AntiqueWhite"  Content="{Binding Path=freguesia}"></Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label FontSize="16px" Foreground="AntiqueWhite"  Content="Concelho: "></Label>
+                                    <Label FontSize="16px" Foreground="AntiqueWhite"  Content="{Binding Path=concelho}"></Label>
+                                </StackPanel>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
