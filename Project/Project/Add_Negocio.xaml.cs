@@ -95,7 +95,7 @@ namespace Project
                     ListaNegocios.getLista().add_Negocio(cliente, contacto, morada, _inicio, _fim, descricao);
 
                     MessageBox.Show("Negócio criado. ");
-                    this.NavigationService.GoBack();
+                    this.NavigationService.Navigate(new Negocios(ListaNegocios.getLista()));
                 }
                 else
                 {

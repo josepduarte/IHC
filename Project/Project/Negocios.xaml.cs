@@ -31,6 +31,12 @@ namespace Project
             InitializeComponent();
             negocios = this;
         }
+        public Negocios(ListaNegocios negocios)
+        {
+            InitializeComponent();
+            datagrid.ItemsSource = null;
+            datagrid.ItemsSource = negocios;
+        }
         public static Negocios get_negocios()
         {
             return negocios;

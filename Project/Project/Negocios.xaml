@@ -58,7 +58,7 @@
                 </Grid.RowDefinitions>
 
                 <materialDesign:Card Margin="20">
-                    <DataGrid  ItemsSource="{Binding Source={StaticResource Negocios}}" AutoGenerateColumns="True"  ColumnWidth="*" AutoGeneratingColumn="DataGrid_AutoGeneratingColumn"  >
+                    <DataGrid  Name="datagrid" ItemsSource="{Binding Source={StaticResource Negocios}}" AutoGenerateColumns="True"  ColumnWidth="*" AutoGeneratingColumn="DataGrid_AutoGeneratingColumn"  >
                         <DataGrid.Columns>
                             <DataGridTemplateColumn Header="Precipitação" IsReadOnly="False" DisplayIndex="7" >
                                 <DataGridTemplateColumn.CellTemplate>
