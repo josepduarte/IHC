@@ -148,6 +148,8 @@ namespace Project
             add_Encomenda("Maria Madeira Eu Quero", 93423221, "nº102, Rua das Plantas", "Eucalipto", "20", "100.57 ", Convert.ToDateTime("2017-05-10"));
             add_Encomenda("Carlos Josefiino Andrade", 1234212, "nº10, Rua dos Arrozes Perfeito", "Sobreiro", "40", "180.50", Convert.ToDateTime("2017-05-12"));
             add_Encomenda("Marta Carvalho", 9123121, "nº 20, Rua dos Carvalhos Perdidos", "Carvalhos", "10", "50.05", Convert.ToDateTime("2017-10-11"));
+            add_Encomenda("Afonso Trindade", 1232134212, "nº54, Rua dos Afonsos Não Esquecidos", "Sobreiro", "120", "540.50", Convert.ToDateTime("2017-05-12"));
+            add_Encomenda("Artur Moelas", 913121241, "nº 81, Rua das Galinhas com Penas", "Carvalho", "20", "100.10", Convert.ToDateTime("2017-10-11"));
             lista = this;
 
         }

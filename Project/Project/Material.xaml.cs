@@ -115,6 +115,8 @@ namespace Project
             add_Material("Trator", 2, "unidades", "Dois tratores de 2006 de grandes dimensões. ");
             add_Material("Moto-serra", 3, "unidades", "Em boas condições. ");
             add_Material("Gasolina de moto-serra", 25, "litros", "Nos estaleiros de Trás-as-Encostas. ");
+            add_Material("Descascador", 2, "unidades", "Em boas condições. ");
+            add_Material("Machados", 5, "unidades", "Dois novos guardados no armazém da Benfeita. ");
             lista = this;
 
         }

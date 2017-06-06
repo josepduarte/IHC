@@ -158,6 +158,10 @@ namespace Project
         public ListaPropriedades()
         {
             add_Propriedade("Outeiro", "Préstimo", "Águeda", 40.56206879475859, - 8.447628021240234);
+            add_Propriedade("Tamengos", "Banhos", "Anadia", 40.4157179215892, -8.465652465820312);
+            add_Propriedade("Rua do Mato Alto", "Bouça da Aguincheira", "Vale de Cambra", 40.80042614416932, -8.380680084228516);
+            add_Propriedade("Pinho", "Arrifana", "Resende", 40.76923178293145, -8.025684356689453);
+            add_Propriedade("Rua Sra de Jesus", "Casa da Lagoa", "Bombarral",39.28302812808919, -9.13736343383789);
             pushpins = pushpins2;
             lista = this;
 

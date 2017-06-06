@@ -173,6 +173,8 @@ namespace Project
             add_Madeira("Eucalipto", "100");
             add_Madeira("Carvalho", "240");
             add_Madeira("Sobreiro", "70");
+            add_Madeira("Pinheiro", "130");
+            add_Madeira("Mimosas", "130");
             lista = this;
 
         }
