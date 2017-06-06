@@ -64,7 +64,7 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <Label Grid.Column="0" FontSize="20px"   Content="{Binding Path=tipo}" Margin="20 0 0 0"></Label>
-                                        <Slider Grid.Column="1" AutoToolTipPlacement="TopLeft" Maximum="1000" Margin="20 0 0 0" Value="{Binding Path=quantidade, TargetNullValue=0, FallbackValue=10}" TickPlacement="BottomRight" TickFrequency="100" AutoToolTipPrecision="0" VerticalAlignment="Center" FontSize="20px" Width="500px"  ></Slider>
+                                        <Slider IsSnapToTickEnabled="True" Grid.Column="1" AutoToolTipPlacement="TopLeft" Maximum="1000" Margin="20 0 0 0" Value="{Binding Path=quantidade, TargetNullValue=0, FallbackValue=10}" TickPlacement="BottomRight" TickFrequency="10" AutoToolTipPrecision="0" VerticalAlignment="Center" FontSize="20px" Width="500px"  ></Slider>
                                         <Label Grid.Column="2" Name="quantity" FontSize="20px"  Margin="20 0 0 0"   Content="{Binding Path=quantidade}" ContentStringFormat="{}{0} m2" ></Label>
                                     </Grid>
                                 </DataTemplate>
